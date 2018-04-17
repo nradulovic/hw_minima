@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name TO_SOT_Packages_THT)(type KiCad)(uri "$(KISYSMOD)TO_SOT_Packages_THT.pretty")(options "")(descr ""))
+  (lib (name Housings_DIP)(type KiCad)(uri "$(KISYSMOD)Housings_DIP.pretty")(options "")(descr ""))
+  (lib (name Choke_Axial_ThroughHole)(type KiCad)(uri "$(KISYSMOD)Choke_Axial_ThroughHole.pretty")(options "")(descr ""))
+)

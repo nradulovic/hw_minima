@@ -1,0 +1,8 @@
+*.net
+*.tmp
+*.back
+*.bak
+*.kicad_pcb-bak
+*.csv
+*.xml
+*.html
