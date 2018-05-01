@@ -1,4 +1,4 @@
-update=понедељак, 02. април 2018. 23:58:59 CEST
+update=субота, 28. април 2018. 23:27:29 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=/home/nenad/workspace/personal/kicad/kicad-symbols
@@ -40,5 +42,5 @@ LibName10=power
 LibName11=Regulator_Linear
 LibName12=Transistor_BJT
 LibName13=Analog
-[general]
-version=1
+LibName14=Relay
+LibName15=Mechanical
