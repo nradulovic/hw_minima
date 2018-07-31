@@ -1,4 +1,4 @@
-update=субота, 28. април 2018. 23:27:29 CEST
+update=понедељак, 30. јул 2018. 20:55:45 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,20 +27,4 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=/home/nenad/workspace/personal/kicad/kicad-symbols
-[eeschema/libraries]
-LibName1=Amplifier_Audio
-LibName2=Amplifier_Operational
-LibName3=Audio
-LibName4=Device
-LibName5=Diode
-LibName6=Diode_Bridge
-LibName7=Connector_Generic
-LibName8=Connector_Generic_Shielded
-LibName9=Connector_Specialized
-LibName10=power
-LibName11=Regulator_Linear
-LibName12=Transistor_BJT
-LibName13=Analog
-LibName14=Relay
-LibName15=Mechanical
+LibDir=

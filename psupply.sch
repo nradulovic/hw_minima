@@ -1,25 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:Amplifier_Audio
-LIBS:Amplifier_Operational
-LIBS:Audio
-LIBS:Device
-LIBS:Diode
-LIBS:Diode_Bridge
-LIBS:Connector_Generic
-LIBS:Connector_Generic_Shielded
-LIBS:Connector_Specialized
-LIBS:power
-LIBS:Regulator_Linear
-LIBS:Transistor_BJT
-LIBS:Analog
-LIBS:Relay
-LIBS:Mechanical
+EESchema Schematic File Version 4
 LIBS:minima-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -30,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CP1 C401
+L Device:CP1 C10
 U 1 1 5AC0A8E9
 P 4500 1350
-F 0 "C401" H 4525 1450 50  0000 L CNN
+F 0 "C10" H 4525 1450 50  0000 L CNN
 F 1 "4m7" H 4525 1250 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn" H 4500 1350 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2280821.pdf" H 4500 1350 50  0001 C CNN
@@ -44,10 +29,10 @@ F 6 "EPCOS:B41252B7478M000" H 4500 1350 60  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDPWR #PWR027
+L minima-rescue:GNDPWR #PWR013
 U 1 1 5AC0AAC9
 P 4400 1600
-F 0 "#PWR027" H 4400 1400 50  0001 C CNN
+F 0 "#PWR013" H 4400 1400 50  0001 C CNN
 F 1 "GNDPWR" H 4400 1470 50  0000 C CNN
 F 2 "" H 4400 1550 50  0001 C CNN
 F 3 "" H 4400 1550 50  0001 C CNN
@@ -55,10 +40,10 @@ F 3 "" H 4400 1550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VCC #PWR028
+L power:VCC #PWR011
 U 1 1 5AC0C44A
 P 5100 1000
-F 0 "#PWR028" H 5100 850 50  0001 C CNN
+F 0 "#PWR011" H 5100 850 50  0001 C CNN
 F 1 "VCC" H 5100 1150 50  0000 C CNN
 F 2 "" H 5100 1000 50  0001 C CNN
 F 3 "" H 5100 1000 50  0001 C CNN
@@ -66,10 +51,10 @@ F 3 "" H 5100 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VEE #PWR029
+L power:VEE #PWR014
 U 1 1 5AC0C478
 P 5100 2200
-F 0 "#PWR029" H 5100 2050 50  0001 C CNN
+F 0 "#PWR014" H 5100 2050 50  0001 C CNN
 F 1 "VEE" H 5100 2350 50  0000 C CNN
 F 2 "" H 5100 2200 50  0001 C CNN
 F 3 "" H 5100 2200 50  0001 C CNN
@@ -77,116 +62,10 @@ F 3 "" H 5100 2200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R401
-U 1 1 5AC18525
-P 6050 1100
-F 0 "R401" V 6130 1100 50  0000 C CNN
-F 1 "1" V 6050 1100 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 5980 1100 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1888337.pdf" H 6050 1100 50  0001 C CNN
-F 4 "MO" V 6300 1100 60  0000 C CNN "Type"
-F 5 "1/1" V 6200 1100 60  0000 C CNN "Power"
-F 6 "Farnell:1738569" V 6050 1100 60  0001 C CNN "Vendor"
-F 7 "NEOHM-TE:ROX1SJ47R" V 6050 1100 60  0001 C CNN "Manufacturer"
-	1    6050 1100
-	0    1    1    0   
-$EndComp
-$Comp
-L CP1 C402
-U 1 1 5AC186D5
-P 6300 1350
-F 0 "C402" H 6325 1450 50  0000 L CNN
-F 1 "1m" H 6325 1250 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 6300 1350 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2321616.pdf" H 6300 1350 50  0001 C CNN
-F 4 "35V" H 6400 1150 60  0000 C CNN "Voltage"
-F 5 "Farnell:2346262 " H 6300 1350 60  0001 C CNN "Vendor"
-F 6 "Rybicon:35YXJ1000M12.5X20" H 6300 1350 60  0001 C CNN "Manufacturer"
-	1    6300 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L GNDPWR #PWR030
-U 1 1 5AC18927
-P 6200 1600
-F 0 "#PWR030" H 6200 1400 50  0001 C CNN
-F 1 "GNDPWR" H 6200 1470 50  0000 C CNN
-F 2 "" H 6200 1550 50  0001 C CNN
-F 3 "" H 6200 1550 50  0001 C CNN
-	1    6200 1600
-	0    1    1    0   
-$EndComp
-$Comp
-L VDDA #PWR031
-U 1 1 5AC18EC8
-P 6750 1000
-F 0 "#PWR031" H 6750 850 50  0001 C CNN
-F 1 "VDDA" H 6750 1150 50  0000 C CNN
-F 2 "" H 6750 1000 50  0001 C CNN
-F 3 "" H 6750 1000 50  0001 C CNN
-	1    6750 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L VSSA #PWR032
-U 1 1 5AC191E0
-P 6750 2200
-F 0 "#PWR032" H 6750 2050 50  0001 C CNN
-F 1 "VSSA" H 6750 2350 50  0000 C CNN
-F 2 "" H 6750 2200 50  0001 C CNN
-F 3 "" H 6750 2200 50  0001 C CNN
-	1    6750 2200
-	-1   0    0    1   
-$EndComp
-$Comp
-L Varistor RV401
-U 1 1 5AC1DF7D
-P 6750 1350
-F 0 "RV401" V 6875 1350 50  0000 C CNN
-F 1 "Varistor" V 6625 1350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" V 6680 1350 50  0001 C CNN
-F 3 "" H 6750 1350 50  0001 C CNN
-	1    6750 1350
-	1    0    0    1   
-$EndComp
-$Comp
-L Varistor RV402
-U 1 1 5AC1E0F1
-P 6750 1850
-F 0 "RV402" V 6875 1850 50  0000 C CNN
-F 1 "Varistor" V 6625 1850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" V 6680 1850 50  0001 C CNN
-F 3 "" H 6750 1850 50  0001 C CNN
-	1    6750 1850
-	1    0    0    1   
-$EndComp
-$Comp
-L PWR_FLAG #FLG033
-U 1 1 5AC245F2
-P 6300 1100
-F 0 "#FLG033" H 6300 1175 50  0001 C CNN
-F 1 "PWR_FLAG" H 6300 1250 50  0000 C CNN
-F 2 "" H 6300 1100 50  0001 C CNN
-F 3 "" H 6300 1100 50  0001 C CNN
-	1    6300 1100
-	1    0    0    -1  
-$EndComp
-$Comp
-L PWR_FLAG #FLG034
-U 1 1 5AC24714
-P 6300 2100
-F 0 "#FLG034" H 6300 2175 50  0001 C CNN
-F 1 "PWR_FLAG" H 6300 2250 50  0000 C CNN
-F 2 "" H 6300 2100 50  0001 C CNN
-F 3 "" H 6300 2100 50  0001 C CNN
-	1    6300 2100
-	-1   0    0    1   
-$EndComp
-$Comp
-L PWR_FLAG #FLG035
+L power:PWR_FLAG #FLG02
 U 1 1 5AC9DA5D
 P 4500 1000
-F 0 "#FLG035" H 4500 1075 50  0001 C CNN
+F 0 "#FLG02" H 4500 1075 50  0001 C CNN
 F 1 "PWR_FLAG" H 4500 1150 50  0000 C CNN
 F 2 "" H 4500 1000 50  0001 C CNN
 F 3 "" H 4500 1000 50  0001 C CNN
@@ -194,90 +73,16 @@ F 3 "" H 4500 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG036
+L power:PWR_FLAG #FLG03
 U 1 1 5AC9DBA9
 P 4500 2200
-F 0 "#FLG036" H 4500 2275 50  0001 C CNN
+F 0 "#FLG03" H 4500 2275 50  0001 C CNN
 F 1 "PWR_FLAG" H 4500 2350 50  0000 C CNN
 F 2 "" H 4500 2200 50  0001 C CNN
 F 3 "" H 4500 2200 50  0001 C CNN
 	1    4500 2200
 	-1   0    0    1   
 $EndComp
-$Comp
-L CP1 C404
-U 1 1 5AD5EB49
-P 6300 1850
-F 0 "C404" H 6325 1950 50  0000 L CNN
-F 1 "1m" H 6325 1750 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm" H 6300 1850 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2321616.pdf" H 6300 1850 50  0001 C CNN
-F 4 "35V" H 6400 1650 60  0000 C CNN "Voltage"
-F 5 "Farnell:2346262 " H 6300 1850 60  0001 C CNN "Vendor"
-F 6 "Rybicon:35YXJ1000M12.5X20" H 6300 1850 60  0001 C CNN "Manufacturer"
-	1    6300 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R402
-U 1 1 5AD61F96
-P 6050 2100
-F 0 "R402" V 6130 2100 50  0000 C CNN
-F 1 "1" V 6050 2100 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 5980 2100 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1888337.pdf" H 6050 2100 50  0001 C CNN
-F 4 "MO" V 6300 2100 60  0000 C CNN "Type"
-F 5 "1/1" V 6200 2100 60  0000 C CNN "Power"
-F 6 "Farnell:1738569" V 6050 2100 60  0001 C CNN "Vendor"
-F 7 "NEOHM-TE:ROX1SJ47R" V 6050 2100 60  0001 C CNN "Manufacturer"
-	1    6050 2100
-	0    1    1    0   
-$EndComp
-Text HLabel 10100 3100 2    60   Output ~ 0
-sgnd
-Text HLabel 10100 3400 2    60   Output ~ 0
-spkgnd
-$Comp
-L R R403
-U 1 1 5ADE043D
-P 9750 3100
-F 0 "R403" V 9830 3100 50  0000 C CNN
-F 1 "10" V 9750 3100 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 9680 3100 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1888337.pdf" H 9750 3100 50  0001 C CNN
-F 4 "MO" V 10000 3100 60  0000 C CNN "Type"
-F 5 "1/1" V 9900 3100 60  0000 C CNN "Power"
-F 6 "Farnell:1738569" V 9750 3100 60  0001 C CNN "Vendor"
-F 7 "NEOHM-TE:ROX1SJ47R" V 9750 3100 60  0001 C CNN "Manufacturer"
-	1    9750 3100
-	0    1    1    0   
-$EndComp
-$Comp
-L GNDPWR #PWR037
-U 1 1 5ADE04DD
-P 9400 3100
-F 0 "#PWR037" H 9400 2900 50  0001 C CNN
-F 1 "GNDPWR" H 9400 2970 50  0000 C CNN
-F 2 "" H 9400 3050 50  0001 C CNN
-F 3 "" H 9400 3050 50  0001 C CNN
-	1    9400 3100
-	0    1    1    0   
-$EndComp
-$Comp
-L GNDPWR #PWR038
-U 1 1 5ADE0530
-P 9400 3400
-F 0 "#PWR038" H 9400 3200 50  0001 C CNN
-F 1 "GNDPWR" H 9400 3270 50  0000 C CNN
-F 2 "" H 9400 3350 50  0001 C CNN
-F 3 "" H 9400 3350 50  0001 C CNN
-	1    9400 3400
-	0    1    1    0   
-$EndComp
-Text HLabel 5800 1000 1    60   Input ~ 0
-ps_prevcc
-Text HLabel 5800 2200 3    60   Input ~ 0
-ps_prevee
 Text HLabel 3900 1000 1    60   Input ~ 0
 ps_vcc
 Text HLabel 3900 2200 3    60   Input ~ 0
@@ -285,59 +90,21 @@ ps_vee
 Text HLabel 3300 1000 1    60   Input ~ 0
 ps_gnd
 $Comp
-L GNDPWR #PWR039
+L minima-rescue:GNDPWR #PWR012
 U 1 1 5ADE314C
 P 3300 1600
-F 0 "#PWR039" H 3300 1400 50  0001 C CNN
+F 0 "#PWR012" H 3300 1400 50  0001 C CNN
 F 1 "GNDPWR" H 3300 1470 50  0000 C CNN
 F 2 "" H 3300 1550 50  0001 C CNN
 F 3 "" H 3300 1550 50  0001 C CNN
 	1    3300 1600
 	1    0    0    -1  
 $EndComp
-Text HLabel 1400 3600 0    60   Input ~ 0
-ps_ctrl_op
-Text HLabel 1400 3900 0    60   Input ~ 0
-ps_ctrl_gnd
-Text HLabel 1400 4200 0    60   Input ~ 0
-ps_ctrl_vdd12
 $Comp
-L PN2222A Q401
-U 1 1 5ADDB165
-P 2300 3600
-F 0 "Q401" H 2500 3675 50  0000 L CNN
-F 1 "PN2222A" H 2500 3600 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Narrow_Oval" H 2500 3525 50  0001 L CIN
-F 3 "" H 2300 3600 50  0001 L CNN
-	1    2300 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R404
-U 1 1 5ADDB232
-P 1850 3600
-F 0 "R404" V 1930 3600 50  0000 C CNN
-F 1 "1k" V 1850 3600 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.24x1.80mm_HandSolder" V 1780 3600 50  0001 C CNN
-F 3 "" H 1850 3600 50  0001 C CNN
-	1    1850 3600
-	0    1    1    0   
-$EndComp
-Text HLabel 2700 4200 2    60   Output ~ 0
-mutep
-Text HLabel 2700 3300 2    60   Output ~ 0
-muten
-Text HLabel 1400 4500 0    60   Output ~ 0
-ps_ctrl_s_outp
-Text HLabel 1400 4800 0    60   Output ~ 0
-ps_ctrl_s_ovrld
-Text HLabel 2700 4500 2    60   Input ~ 0
-outp
-$Comp
-L PWR_FLAG #FLG040
+L power:PWR_FLAG #FLG01
 U 1 1 5AE5530D
 P 3000 1000
-F 0 "#FLG040" H 3000 1075 50  0001 C CNN
+F 0 "#FLG01" H 3000 1075 50  0001 C CNN
 F 1 "PWR_FLAG" H 3000 1150 50  0000 C CNN
 F 2 "" H 3000 1000 50  0001 C CNN
 F 3 "" H 3000 1000 50  0001 C CNN
@@ -345,10 +112,10 @@ F 3 "" H 3000 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 C403
+L Device:CP1 C11
 U 1 1 5AE75EE3
 P 4500 1850
-F 0 "C403" H 4525 1950 50  0000 L CNN
+F 0 "C11" H 4525 1950 50  0000 L CNN
 F 1 "4m7" H 4525 1750 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn" H 4500 1850 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2280821.pdf" H 4500 1850 50  0001 C CNN
@@ -358,72 +125,21 @@ F 6 "EPCOS:B41252B7478M000" H 4500 1850 60  0001 C CNN "Manufacturer"
 	1    4500 1850
 	1    0    0    -1  
 $EndComp
-$Comp
-L C C405
-U 1 1 5AE7D5E0
-P 9750 2800
-F 0 "C405" H 9775 2900 50  0000 L CNN
-F 1 "100n" H 9775 2700 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.24x1.80mm_HandSolder" H 9788 2650 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2265830.pdf" H 9750 2800 50  0001 C CNN
-F 4 "100V" H 9800 2500 60  0000 L CNN "Voltage"
-F 5 "X7R" H 9800 2600 60  0000 L CNN "Type"
-F 6 "Farnell:1856606" H 9750 2800 60  0001 C CNN "Vendor"
-F 7 "Multicomp:MCSH31B104K101CT" H 9750 2800 60  0001 C CNN "Manufacturer"
-	1    9750 2800
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
-	4500 1000 4500 1200
+	4500 1000 4500 1100
 Connection ~ 4500 1100
 Wire Wire Line
-	4500 2000 4500 2200
+	4500 2000 4500 2100
 Connection ~ 4500 2100
 Wire Wire Line
-	4500 1500 4500 1700
+	4500 1500 4500 1600
 Connection ~ 4500 1600
 Wire Wire Line
-	5800 1000 5800 1100
-Wire Wire Line
-	5800 1100 5900 1100
-Wire Wire Line
-	5800 2200 5800 2100
-Wire Wire Line
-	5800 2100 5900 2100
-Connection ~ 6300 1100
-Wire Wire Line
-	6300 1500 6300 1700
-Connection ~ 6300 1600
-Connection ~ 6300 2100
-Wire Wire Line
-	6750 2000 6750 2200
-Wire Wire Line
-	6750 1000 6750 1200
-Wire Wire Line
-	6750 1500 6750 1700
-Connection ~ 6750 1600
-Wire Wire Line
-	9400 3100 9600 3100
-Wire Wire Line
-	9900 3100 10100 3100
-Wire Wire Line
-	6200 1100 6750 1100
-Wire Wire Line
-	6200 2100 6750 2100
-Wire Wire Line
-	6300 1200 6300 1100
-Wire Wire Line
-	6300 2000 6300 2100
-Wire Wire Line
-	6200 1600 6750 1600
-Connection ~ 6750 1100
-Connection ~ 6750 2100
-Wire Wire Line
-	3900 1100 5100 1100
+	3900 1100 4500 1100
 Wire Wire Line
 	5100 1100 5100 1000
 Wire Wire Line
-	3900 2100 5100 2100
+	3900 2100 4500 2100
 Wire Wire Line
 	5100 2100 5100 2200
 Wire Wire Line
@@ -433,41 +149,22 @@ Wire Wire Line
 Wire Wire Line
 	4400 1600 4500 1600
 Wire Wire Line
-	3300 1600 3300 1000
-Wire Wire Line
-	2700 3300 2400 3300
-Wire Wire Line
-	2400 3300 2400 3400
-Wire Wire Line
-	1400 4200 2700 4200
-Wire Wire Line
-	1400 3900 2400 3900
-Wire Wire Line
-	2400 3800 2400 4800
-Wire Wire Line
-	1400 3600 1700 3600
-Wire Wire Line
-	2000 3600 2100 3600
-Wire Wire Line
-	2400 4800 1400 4800
-Connection ~ 2400 3900
-Wire Wire Line
-	2700 4500 1400 4500
+	3300 1600 3300 1100
 Wire Wire Line
 	3000 1000 3000 1100
 Wire Wire Line
 	3000 1100 3300 1100
 Connection ~ 3300 1100
 Wire Wire Line
-	9400 3400 10100 3400
+	4500 1100 4500 1200
 Wire Wire Line
-	9900 2800 10000 2800
+	4500 1100 5100 1100
 Wire Wire Line
-	10000 2800 10000 3100
-Connection ~ 10000 3100
+	4500 2100 4500 2200
 Wire Wire Line
-	9600 2800 9500 2800
+	4500 2100 5100 2100
 Wire Wire Line
-	9500 2800 9500 3100
-Connection ~ 9500 3100
+	4500 1600 4500 1700
+Wire Wire Line
+	3300 1100 3300 1000
 $EndSCHEMATC
