@@ -33,7 +33,7 @@ F3 "ps_vee" I L 6400 4300 60
 F4 "ps_gnd" I L 6400 4400 60 
 $EndSheet
 $Comp
-L minima-rescue:Screw_Terminal_01x02 J1
+L Connector:Screw_Terminal_01x02 J1
 U 1 1 5ABB2BD1
 P 9100 1800
 F 0 "J1" H 9100 1900 50  0000 C CNN
@@ -63,7 +63,7 @@ Text Notes 800  6550 0    60   ~ 0
 Mounting components
 Connection ~ 2800 2100
 $Comp
-L minima-rescue:Mounting_Hole MK1
+L Mechanical:MountingHole MK1
 U 1 1 5AE4F4CA
 P 1200 6900
 F 0 "MK1" H 1200 7100 50  0000 C CNN
@@ -74,7 +74,7 @@ F 3 "" H 1200 6900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L minima-rescue:Mounting_Hole MK3
+L Mechanical:MountingHole MK3
 U 1 1 5AE4FF11
 P 1200 7200
 F 0 "MK3" H 1200 7400 50  0000 C CNN
@@ -85,7 +85,7 @@ F 3 "" H 1200 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L minima-rescue:Mounting_Hole MK4
+L Mechanical:MountingHole MK4
 U 1 1 5AE4FFFC
 P 2200 7200
 F 0 "MK4" H 2200 7400 50  0000 C CNN
@@ -96,7 +96,7 @@ F 3 "" H 2200 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L minima-rescue:Mounting_Hole MK2
+L Mechanical:MountingHole MK2
 U 1 1 5AE500F0
 P 2200 6900
 F 0 "MK2" H 2200 7100 50  0000 C CNN
@@ -107,7 +107,7 @@ F 3 "" H 2200 6900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L minima-rescue:Screw_Terminal_01x04 J2
+L Connector:Screw_Terminal_01x04 J2
 U 1 1 5AE50566
 P 2500 1900
 F 0 "J2" H 2500 2100 50  0000 C CNN
@@ -118,7 +118,7 @@ F 3 "" H 2500 1900 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L minima-rescue:Screw_Terminal_01x03 J3
+L Connector:Screw_Terminal_01x03 J3
 U 1 1 5AE51422
 P 5550 4300
 F 0 "J3" H 5550 4600 50  0000 C CNN
@@ -135,18 +135,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 4200 6400 4200
 $Comp
-L minima-rescue:Mounting_Hole LOGO1
-U 1 1 5AE5636C
-P 2950 6900
-F 0 "LOGO1" H 2950 7100 50  0000 C CNN
-F 1 "KiCad Logo" H 2950 7025 50  0000 C CNN
-F 2 "Symbol:KiCad-Logo2_12mm_SilkScreen" H 2950 6900 50  0001 C CNN
-F 3 "" H 2950 6900 50  0001 C CNN
-	1    2950 6900
-	1    0    0    -1  
-$EndComp
-$Comp
-L minima-rescue:Mounting_Hole LOGO2
+L Graphic:Logo_Open_Hardware_Small LOGO2
 U 1 1 5AE56655
 P 2950 7200
 F 0 "LOGO2" H 2950 7400 50  0000 C CNN

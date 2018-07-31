@@ -20,16 +20,16 @@ U 1 1 5AC0A8E9
 P 4500 1350
 F 0 "C10" H 4525 1450 50  0000 L CNN
 F 1 "4m7" H 4525 1250 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn" H 4500 1350 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2280821.pdf" H 4500 1350 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D22.0mm_P10.00mm_SnapIn" H 4500 1350 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2130719.pdf" H 4500 1350 50  0001 C CNN
 F 4 "35V" H 4600 1150 60  0000 C CNN "Voltage"
-F 5 "Farnell:2750103" H 4500 1350 60  0001 C CNN "Vendor"
-F 6 "EPCOS:B41252B7478M000" H 4500 1350 60  0001 C CNN "Manufacturer"
+F 5 "Farnell:2468294" H 4500 1350 60  0001 C CNN "Vendor"
+F 6 "EPCOS:B41252A7478M000" H 4500 1350 60  0001 C CNN "Manufacturer"
 	1    4500 1350
 	1    0    0    -1  
 $EndComp
 $Comp
-L minima-rescue:GNDPWR #PWR013
+L power:GNDPWR #PWR013
 U 1 1 5AC0AAC9
 P 4400 1600
 F 0 "#PWR013" H 4400 1400 50  0001 C CNN
@@ -90,7 +90,7 @@ ps_vee
 Text HLabel 3300 1000 1    60   Input ~ 0
 ps_gnd
 $Comp
-L minima-rescue:GNDPWR #PWR012
+L power:GNDPWR #PWR012
 U 1 1 5ADE314C
 P 3300 1600
 F 0 "#PWR012" H 3300 1400 50  0001 C CNN
@@ -109,20 +109,6 @@ F 1 "PWR_FLAG" H 3000 1150 50  0000 C CNN
 F 2 "" H 3000 1000 50  0001 C CNN
 F 3 "" H 3000 1000 50  0001 C CNN
 	1    3000 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP1 C11
-U 1 1 5AE75EE3
-P 4500 1850
-F 0 "C11" H 4525 1950 50  0000 L CNN
-F 1 "4m7" H 4525 1750 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn" H 4500 1850 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2280821.pdf" H 4500 1850 50  0001 C CNN
-F 4 "35V" H 4600 1650 60  0000 C CNN "Voltage"
-F 5 "Farnell:2750103" H 4500 1850 60  0001 C CNN "Vendor"
-F 6 "EPCOS:B41252B7478M000" H 4500 1850 60  0001 C CNN "Manufacturer"
-	1    4500 1850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -167,4 +153,18 @@ Wire Wire Line
 	4500 1600 4500 1700
 Wire Wire Line
 	3300 1100 3300 1000
+$Comp
+L Device:CP1 C11
+U 1 1 5B60A435
+P 4500 1850
+F 0 "C11" H 4525 1950 50  0000 L CNN
+F 1 "4m7" H 4525 1750 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D22.0mm_P10.00mm_SnapIn" H 4500 1850 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2130719.pdf" H 4500 1850 50  0001 C CNN
+F 4 "35V" H 4600 1650 60  0000 C CNN "Voltage"
+F 5 "Farnell:2468294" H 4500 1850 60  0001 C CNN "Vendor"
+F 6 "EPCOS:B41252A7478M000" H 4500 1850 60  0001 C CNN "Manufacturer"
+	1    4500 1850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

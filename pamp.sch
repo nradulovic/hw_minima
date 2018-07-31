@@ -110,7 +110,7 @@ Wire Wire Line
 Wire Wire Line
 	4700 3800 4700 3700
 $Comp
-L minima-rescue:GNDPWR #PWR?
+L power:GNDPWR #PWR?
 U 1 1 5ABAC584
 P 10300 4900
 AR Path="/5ABAC584" Ref="#PWR?"  Part="1" 
@@ -136,7 +136,7 @@ Wire Wire Line
 	4700 5000 4800 5000
 Connection ~ 5200 4100
 $Comp
-L minima-rescue:GNDPWR #PWR?
+L power:GNDPWR #PWR?
 U 1 1 5ABAD102
 P 6100 3150
 AR Path="/5ABAD102" Ref="#PWR?"  Part="1" 
