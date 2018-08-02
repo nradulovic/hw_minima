@@ -21,11 +21,11 @@ P 2100 2550
 F 0 "C13" H 2125 2650 50  0000 L CNN
 F 1 "1n" H 2125 2450 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 2138 2400 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1825496.pdf" H 2100 2550 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2095938.pdf" H 2100 2550 50  0001 C CNN
 F 4 "100V" H 2150 2350 60  0000 L CNN "Voltage"
 F 5 "NP0" H 2150 2250 60  0000 L CNN "Type"
-F 6 "Farnell:1856276" H 2100 2550 60  0001 C CNN "Vendor"
-F 7 "Multicomp:MCMT21N102F101CT" H 2100 2550 60  0001 C CNN "Manufacturer"
+F 6 "Farnell:1100513" H 2100 2550 60  0001 C CNN "Vendor"
+F 7 "AVX:SR211A102KAR" H 2100 2550 60  0001 C CNN "Manufacturer"
 	1    2100 2550
 	1    0    0    -1  
 $EndComp
@@ -36,11 +36,11 @@ P 1600 2550
 F 0 "C12" H 1625 2650 50  0000 L CNN
 F 1 "220p" H 1625 2450 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 1638 2400 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1825496.pdf" H 1600 2550 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2095938.pdf" H 1600 2550 50  0001 C CNN
 F 4 "100V" H 1650 2350 60  0000 L CNN "Voltage"
 F 5 "NP0" H 1650 2250 60  0000 L CNN "Type"
-F 6 "Farnell:1856271" H 1600 2550 60  0001 C CNN "Vendor"
-F 7 "Multicomp:MCMT21N221F101CT" H 1600 2550 60  0001 C CNN "Manufacturer"
+F 6 "Farnell:1100508" H 1600 2550 60  0001 C CNN "Vendor"
+F 7 "AVX:SR211A221JAR" H 1600 2550 60  0001 C CNN "Manufacturer"
 	1    1600 2550
 	1    0    0    -1  
 $EndComp
@@ -55,11 +55,11 @@ P 1350 2000
 F 0 "R9" V 1430 2000 50  0000 C CNN
 F 1 "100" V 1350 2000 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1280 2000 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2052875.pdf" H 1350 2000 50  0001 C CNN
-F 4 "Farnell:1717738" V 1350 2000 60  0001 C CNN "Vendor"
-F 5 "PANASONIC:ERA8AEB101V" V 1350 2000 60  0001 C CNN "Manufacturer"
+F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 1350 2000 50  0001 C CNN
+F 4 "Farnell:2329854" V 1350 2000 60  0001 C CNN "Vendor"
+F 5 "TE Connectivity:LR0204F100R" V 1350 2000 60  0001 C CNN "Manufacturer"
 F 6 "MF" V 1600 2000 60  0000 C CNN "Type"
-F 7 "1/4" V 1500 2000 60  0000 C CNN "Power"
+F 7 "0.25W" V 1500 2000 60  0000 C CNN "Power"
 	1    1350 2000
 	0    1    1    0   
 $EndComp
@@ -70,11 +70,11 @@ P 1850 2000
 F 0 "R10" V 1930 2000 50  0000 C CNN
 F 1 "100" V 1850 2000 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1780 2000 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2052875.pdf" H 1850 2000 50  0001 C CNN
-F 4 "Farnell:1717738" V 1850 2000 60  0001 C CNN "Vendor"
-F 5 "PANASONIC:ERA8AEB101V" V 1850 2000 60  0001 C CNN "Manufacturer"
+F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 1850 2000 50  0001 C CNN
+F 4 "Farnell:2329854" V 1850 2000 60  0001 C CNN "Vendor"
+F 5 "TE Connectivity:LR0204F100R" V 1850 2000 60  0001 C CNN "Manufacturer"
 F 6 "MF" V 2100 2000 60  0000 C CNN "Type"
-F 7 "1/4" V 2000 2000 60  0000 C CNN "Power"
+F 7 "0.25W" V 2000 2000 60  0000 C CNN "Power"
 	1    1850 2000
 	0    1    1    0   
 $EndComp
@@ -84,12 +84,12 @@ U 1 1 5B193CC4
 P 3350 3200
 F 0 "R12" V 3430 3200 50  0000 C CNN
 F 1 "10" V 3350 3200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 3280 3200 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1332875.pdf?_ga=2.142443770.970921211.1525990156-997268051.1515705412" H 3350 3200 50  0001 C CNN
-F 4 "MO" V 3600 3200 60  0000 C CNN "Type"
-F 5 "1/4" V 3500 3200 60  0000 C CNN "Power"
-F 6 "Farnell:1898502" V 3350 3200 60  0001 C CNN "Vendor"
-F 7 "NEOHM-TE:FRN50J10R/S" V 3350 3200 60  0001 C CNN "Manufacturer"
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3280 3200 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 3350 3200 50  0001 C CNN
+F 4 "Farnell:2329993" V 3350 3200 60  0001 C CNN "Vendor"
+F 5 "TE Connectivity:LR1F10R" V 3350 3200 60  0001 C CNN "Manufacturer"
+F 6 "0.6W" V 3500 3200 60  0000 C CNN "Power"
+F 7 "MF" V 3600 3200 60  0000 C CNN "Type"
 	1    3350 3200
 	0    1    1    0   
 $EndComp
@@ -123,11 +123,11 @@ P 2600 2550
 F 0 "R11" V 2680 2550 50  0000 C CNN
 F 1 "100k" V 2600 2550 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2530 2550 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2052875.pdf" H 2600 2550 50  0001 C CNN
-F 4 "Farnell:1717758" V 2600 2550 60  0001 C CNN "Vendor"
-F 5 "PANASONIC:ERA8AEB104V" V 2600 2550 60  0001 C CNN "Manufacturer"
+F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 2600 2550 50  0001 C CNN
+F 4 "Farnell:2329853" V 2600 2550 60  0001 C CNN "Vendor"
+F 5 "TE Connectivity:LR0204F100K" V 2600 2550 60  0001 C CNN "Manufacturer"
 F 6 "MF" V 2850 2550 60  0000 C CNN "Type"
-F 7 "1/4" V 2750 2550 60  0000 C CNN "Power"
+F 7 "0.25W" V 2750 2550 60  0000 C CNN "Power"
 	1    2600 2550
 	1    0    0    -1  
 $EndComp

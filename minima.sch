@@ -39,9 +39,9 @@ P 9100 1700
 F 0 "J3" H 9100 1800 50  0000 C CNN
 F 1 "output" H 9100 1500 50  0000 C CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal" H 9100 1700 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2138280.pdf" H 9100 1700 50  0001 C CNN
-F 4 "Farnell:3704816" H 9100 1700 60  0001 C CNN "Vendor"
-F 5 "Phoenix:1843606" H 9100 1700 60  0001 C CNN "Manufacturer"
+F 3 "http://www.farnell.com/datasheets/2325421.pdf" H 9100 1700 50  0001 C CNN
+F 4 "Farnell:1792766" H 9100 1700 60  0001 C CNN "Vendor"
+F 5 "Phoenix:MKDSN2,5/2-5.08" H 9100 1700 60  0001 C CNN "Manufacturer"
 	1    9100 1700
 	1    0    0    -1  
 $EndComp
@@ -110,7 +110,9 @@ P 2500 1900
 F 0 "J1" H 2500 2100 50  0000 C CNN
 F 1 "input" H 2500 1600 50  0000 C CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-3.5-H_1x03_P3.50mm_Horizontal" H 2500 1900 50  0001 C CNN
-F 3 "" H 2500 1900 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2322648.pdf" H 2500 1900 50  0001 C CNN
+F 4 "Phoenix:MKDS1/3-3,5" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "Farnell:2478587" H 0   0   50  0001 C CNN "Vendor"
 	1    2500 1900
 	-1   0    0    -1  
 $EndComp
@@ -121,7 +123,9 @@ P 5550 4300
 F 0 "J2" H 5550 4600 50  0000 C CNN
 F 1 "powersupply" H 5550 3900 50  0000 C CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-3-5.08_1x03_P5.08mm_Horizontal" H 5550 4300 50  0001 C CNN
-F 3 "" H 5550 4300 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2325422.pdf" H 5550 4300 50  0001 C CNN
+F 4 "Phoenix:MKDSN2,5/3-5.08" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "Farnell:1792767" H 0   0   50  0001 C CNN "Vendor"
 	1    5550 4300
 	-1   0    0    -1  
 $EndComp
@@ -132,10 +136,10 @@ Wire Wire Line
 Wire Wire Line
 	5750 4200 6400 4200
 $Comp
-L Graphic:Logo_Open_Hardware_Small LOGO1
+L Graphic:Logo_Open_Hardware_Small LOGO2
 U 1 1 5AE56655
 P 2950 7200
-F 0 "LOGO1" H 3200 7400 50  0000 L CNN
+F 0 "LOGO2" H 3200 7400 50  0000 L CNN
 F 1 "OSHW Logo" H 3200 7300 50  0000 L CNN
 F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 2950 7200 50  0001 C CNN
 F 3 "" H 2950 7200 50  0001 C CNN
@@ -197,14 +201,25 @@ Wire Wire Line
 Wire Wire Line
 	8800 1700 8800 2000
 $Comp
-L Graphic:Logo_Open_Hardware_Small LOGO2
+L Graphic:Logo_Open_Hardware_Small LOGO1
 U 1 1 5B612B64
 P 2950 6700
-F 0 "LOGO2" H 3197 6771 50  0000 L CNN
+F 0 "LOGO1" H 3197 6771 50  0000 L CNN
 F 1 "Kicad_Logo" H 3197 6680 50  0000 L CNN
 F 2 "Symbol:KiCad-Logo_5mm_Copper" H 2950 6700 50  0001 C CNN
 F 3 "~" H 2950 6700 50  0001 C CNN
 	1    2950 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small #LOGO1
+U 1 1 5B6132D1
+P 4000 6700
+F 0 "#LOGO1" H 4000 6975 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 4000 6475 50  0001 C CNN
+F 2 "" H 4000 6700 50  0001 C CNN
+F 3 "~" H 4000 6700 50  0001 C CNN
+	1    4000 6700
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
