@@ -33,11 +33,11 @@ F3 "ps_vee" I L 6400 4200 60
 F4 "ps_gnd" I L 6400 4300 60 
 $EndSheet
 $Comp
-L Connector:Screw_Terminal_01x02 J3
+L Connector:Screw_Terminal_01x02 J1
 U 1 1 5ABB2BD1
 P 9100 1700
-F 0 "J3" H 9100 1800 50  0000 C CNN
-F 1 "output" H 9100 1500 50  0000 C CNN
+F 0 "J1" H 9179 1692 50  0000 L CNN
+F 1 "output" H 9179 1601 50  0000 L CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal" H 9100 1700 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2325421.pdf" H 9100 1700 50  0001 C CNN
 F 4 "Farnell:1792766" H 9100 1700 60  0001 C CNN "Vendor"
@@ -71,10 +71,10 @@ F 3 "" H 1200 6900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole MK2
+L Mechanical:MountingHole MK3
 U 1 1 5AE4FF11
 P 1200 7200
-F 0 "MK2" H 1200 7400 50  0000 C CNN
+F 0 "MK3" H 1200 7400 50  0000 C CNN
 F 1 "Mounting_Hole" H 1200 7325 50  0000 C CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_ISO7380_Pad" H 1200 7200 50  0001 C CNN
 F 3 "" H 1200 7200 50  0001 C CNN
@@ -93,10 +93,10 @@ F 3 "" H 2200 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole MK3
+L Mechanical:MountingHole MK2
 U 1 1 5AE500F0
 P 2200 6900
-F 0 "MK3" H 2200 7100 50  0000 C CNN
+F 0 "MK2" H 2200 7100 50  0000 C CNN
 F 1 "Mounting_Hole" H 2200 7025 50  0000 C CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_ISO7380_Pad" H 2200 6900 50  0001 C CNN
 F 3 "" H 2200 6900 50  0001 C CNN
@@ -104,11 +104,11 @@ F 3 "" H 2200 6900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J1
+L Connector_Generic:Conn_01x03 J2
 U 1 1 5AE50566
 P 2500 1900
-F 0 "J1" H 2500 2100 50  0000 C CNN
-F 1 "input" H 2500 1600 50  0000 C CNN
+F 0 "J2" H 2420 2217 50  0000 C CNN
+F 1 "input" H 2420 2126 50  0000 C CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-3.5-H_1x03_P3.50mm_Horizontal" H 2500 1900 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2322648.pdf" H 2500 1900 50  0001 C CNN
 F 4 "Phoenix:MKDS1/3-3,5" H 0   0   50  0001 C CNN "Manufacturer"
@@ -117,11 +117,11 @@ F 5 "Farnell:2478587" H 0   0   50  0001 C CNN "Vendor"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x03 J2
+L Connector:Screw_Terminal_01x03 J3
 U 1 1 5AE51422
 P 5550 4300
-F 0 "J2" H 5550 4600 50  0000 C CNN
-F 1 "powersupply" H 5550 3900 50  0000 C CNN
+F 0 "J3" H 5470 4617 50  0000 C CNN
+F 1 "powersupply" H 5470 4526 50  0000 C CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-3-5.08_1x03_P5.08mm_Horizontal" H 5550 4300 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2325422.pdf" H 5550 4300 50  0001 C CNN
 F 4 "Phoenix:MKDSN2,5/3-5.08" H 0   0   50  0001 C CNN "Manufacturer"
@@ -168,10 +168,10 @@ Wire Wire Line
 Wire Wire Line
 	3000 3200 6100 3200
 $Comp
-L power:GNDPWR #PWR02
+L power:GNDPWR #PWR01
 U 1 1 5B625C49
 P 8800 2000
-F 0 "#PWR02" H 8800 1800 50  0001 C CNN
+F 0 "#PWR01" H 8800 1800 50  0001 C CNN
 F 1 "GNDPWR" H 8804 1846 50  0000 C CNN
 F 2 "" H 8800 1950 50  0001 C CNN
 F 3 "" H 8800 1950 50  0001 C CNN
@@ -186,10 +186,10 @@ Wire Wire Line
 Wire Wire Line
 	2800 1900 2800 3200
 $Comp
-L power:GNDPWR #PWR01
+L power:GNDPWR #PWR02
 U 1 1 5B618FF8
 P 2800 3200
-F 0 "#PWR01" H 2800 3000 50  0001 C CNN
+F 0 "#PWR02" H 2800 3000 50  0001 C CNN
 F 1 "GNDPWR" H 2804 3046 50  0000 C CNN
 F 2 "" H 2800 3150 50  0001 C CNN
 F 3 "" H 2800 3150 50  0001 C CNN
