@@ -211,15 +211,6 @@ F 3 "~" H 2950 6700 50  0001 C CNN
 	1    2950 6700
 	1    0    0    -1  
 $EndComp
-$Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO1
-U 1 1 5B6132D1
-P 4000 6700
-F 0 "#LOGO1" H 4000 6975 50  0001 C CNN
-F 1 "Logo_Open_Hardware_Small" H 4000 6475 50  0001 C CNN
-F 2 "" H 4000 6700 50  0001 C CNN
-F 3 "~" H 4000 6700 50  0001 C CNN
-	1    4000 6700
-	1    0    0    -1  
-$EndComp
+Text Notes 9100 2150 0    50   ~ 0
+Return speaker ground at the\njunction of bypass capacitors \nnear power IC.
 $EndSCHEMATC

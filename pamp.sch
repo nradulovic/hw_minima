@@ -18,12 +18,12 @@ $Comp
 L Device:C C5
 U 1 1 5ABAB1B4
 P 9900 4250
-F 0 "C5" H 9925 4350 50  0000 L CNN
-F 1 "100n" H 9925 4150 50  0000 L CNN
+F 0 "C5" H 9786 4402 50  0000 R CNN
+F 1 "100n" H 9786 4311 50  0000 R CNN
 F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 9938 4100 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1784425.pdf" H 9900 4250 50  0001 C CNN
-F 4 "100V" H 9950 3950 60  0000 L CNN "Voltage"
-F 5 "PP" H 9950 4050 60  0000 L CNN "Type"
+F 4 "100V" H 9786 4212 60  0000 R CNN "Voltage"
+F 5 "PP" H 9786 4106 60  0000 R CNN "Type"
 F 6 "Farnell:1890265" H 9900 4250 60  0001 C CNN "Vendor"
 F 7 "WIMA:MKP2D031001F00KSSD" H 9900 4250 60  0001 C CNN "Manufacturer"
 	1    9900 4250
@@ -33,11 +33,11 @@ $Comp
 L Device:CP1 C6
 U 1 1 5ABAB333
 P 10200 4250
-F 0 "C6" H 10225 4350 50  0000 L CNN
-F 1 "100u" H 10225 4150 50  0000 L CNN
+F 0 "C6" H 10315 4349 50  0000 L CNN
+F 1 "100u" H 10315 4258 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 10200 4250 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2321304.pdf" H 10200 4250 50  0001 C CNN
-F 4 "50V" H 10250 4050 60  0000 L CNN "Voltage"
+F 4 "50V" H 10315 4159 60  0000 L CNN "Voltage"
 F 5 "Farnell:2346269" H 10200 4250 60  0001 C CNN "Vendor"
 F 6 "Rybicon:50YXJ100MT78X11.5" H 10200 4250 60  0001 C CNN "Manufacturer"
 	1    10200 4250
@@ -260,14 +260,14 @@ $Comp
 L Device:R R9
 U 1 1 5AC10204
 P 4550 5300
-F 0 "R9" V 4630 5300 50  0000 C CNN
-F 1 "1k6" V 4550 5300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4480 5300 50  0001 C CNN
+F 0 "R9" V 4665 5300 50  0000 C CNN
+F 1 "1k6" V 4756 5300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4480 5300 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 4550 5300 50  0001 C CNN
 F 4 "Farnell:2329892" V 4550 5300 50  0001 C CNN "Vendor"
 F 5 "TE Connectivity:LR0204F1K6" V 4550 5300 50  0001 C CNN "Manufacturer"
-F 6 "0.25W" V 4700 5300 60  0000 C CNN "Power"
-F 7 "MF" V 4800 5300 60  0000 C CNN "Type"
+F 6 "0.25W" V 4855 5300 60  0000 C CNN "Power"
+F 7 "MF" V 4961 5300 60  0000 C CNN "Type"
 	1    4550 5300
 	0    -1   1    0   
 $EndComp
@@ -303,12 +303,12 @@ $Comp
 L Device:C C8
 U 1 1 5AC8C9A2
 P 9900 5150
-F 0 "C8" H 9925 5250 50  0000 L CNN
-F 1 "100n" H 9925 5050 50  0000 L CNN
+F 0 "C8" H 9786 5302 50  0000 R CNN
+F 1 "100n" H 9786 5211 50  0000 R CNN
 F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 9938 5000 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1784425.pdf" H 9900 5150 50  0001 C CNN
-F 4 "100V" H 9950 4850 60  0000 L CNN "Voltage"
-F 5 "PP" H 9950 4950 60  0000 L CNN "Type"
+F 4 "100V" H 9786 5112 60  0000 R CNN "Voltage"
+F 5 "PP" H 9786 5006 60  0000 R CNN "Type"
 F 6 "Farnell:1890265" H 9900 5150 60  0001 C CNN "Vendor"
 F 7 "WIMA:MKP2D031001F00KSSD" H 9900 5150 60  0001 C CNN "Manufacturer"
 	1    9900 5150
@@ -337,11 +337,11 @@ $Comp
 L Device:CP1 C9
 U 1 1 5ACDCA60
 P 10200 5150
-F 0 "C9" H 10225 5250 50  0000 L CNN
-F 1 "100u" H 10225 5050 50  0000 L CNN
+F 0 "C9" H 10315 5249 50  0000 L CNN
+F 1 "100u" H 10315 5158 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 10200 5150 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2321304.pdf" H 10200 5150 50  0001 C CNN
-F 4 "50V" H 10250 4950 60  0000 L CNN "Voltage"
+F 4 "50V" H 10315 5059 60  0000 L CNN "Voltage"
 F 5 "Farnell:2346269" H 10200 5150 60  0001 C CNN "Vendor"
 F 6 "Rybicon:50YXJ100MT78X11.5" H 10200 5150 60  0001 C CNN "Manufacturer"
 	1    10200 5150
@@ -432,14 +432,14 @@ $Comp
 L Device:R R1
 U 1 1 5B1A76CE
 P 4550 2900
-F 0 "R1" V 4665 2900 50  0000 C CNN
-F 1 "1k6" V 4756 2900 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4480 2900 50  0001 C CNN
+F 0 "R1" V 4100 2900 50  0000 C CNN
+F 1 "1k6" V 4200 2900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4480 2900 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 4550 2900 50  0001 C CNN
 F 4 "TE Connectivity:LR0204F1K6" V 4550 2900 50  0001 C CNN "Manufacturer"
 F 5 "Farnell:2329892" V 4550 2900 50  0001 C CNN "Vendor"
-F 6 "MF" V 4855 2900 60  0000 C CNN "Type"
-F 7 "0.25W" V 4961 2900 60  0000 C CNN "Power"
+F 6 "MF" V 4300 2900 60  0000 C CNN "Type"
+F 7 "0.25W" V 4400 2900 60  0000 C CNN "Power"
 	1    4550 2900
 	0    -1   1    0   
 $EndComp
@@ -584,8 +584,6 @@ $EndComp
 Wire Wire Line
 	6600 3500 6600 4100
 Wire Wire Line
-	6600 3200 6600 3150
-Wire Wire Line
 	6600 2800 6600 2650
 $Comp
 L Device:C C3
@@ -603,5 +601,7 @@ F 7 "AVX:SR211C104KAR" H 6600 3350 60  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 3150 6600 3100
+	6600 3100 6600 3200
+Text Notes 7050 3050 0    50   ~ 0
+Put R3 and C3 right next to output \nconnector. Also, the return ground \nshould be at the connector side.
 $EndSCHEMATC

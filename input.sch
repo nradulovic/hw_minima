@@ -19,13 +19,13 @@ L Device:C C14
 U 1 1 5ABB3781
 P 2100 2550
 F 0 "C14" H 2215 2702 50  0000 L CNN
-F 1 "1n" H 2215 2611 50  0000 L CNN
+F 1 "2n2" H 2215 2611 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 2138 2400 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2095938.pdf" H 2100 2550 50  0001 C CNN
 F 4 "100V" H 2215 2512 60  0000 L CNN "Voltage"
 F 5 "NP0" H 2215 2406 60  0000 L CNN "Type"
-F 6 "Farnell:1100513" H 2100 2550 60  0001 C CNN "Vendor"
-F 7 "AVX:SR211A102KAR" H 2100 2550 60  0001 C CNN "Manufacturer"
+F 6 "Farnell:1100515" H 2100 2550 60  0001 C CNN "Vendor"
+F 7 "SR211A222JAR" H 2100 2550 60  0001 C CNN "Manufacturer"
 	1    2100 2550
 	1    0    0    -1  
 $EndComp
@@ -54,7 +54,7 @@ U 1 1 5AD6B4EC
 P 1350 2000
 F 0 "R10" V 931 2000 50  0000 C CNN
 F 1 "100" V 1022 2000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1280 2000 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1280 2000 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 1350 2000 50  0001 C CNN
 F 4 "Farnell:2329854" V 1350 2000 60  0001 C CNN "Vendor"
 F 5 "TE Connectivity:LR0204F100R" V 1350 2000 60  0001 C CNN "Manufacturer"
@@ -69,7 +69,7 @@ U 1 1 5AD70334
 P 1850 2000
 F 0 "R11" V 1431 2000 50  0000 C CNN
 F 1 "100" V 1522 2000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1780 2000 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1780 2000 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 1850 2000 50  0001 C CNN
 F 4 "Farnell:2329854" V 1850 2000 60  0001 C CNN "Vendor"
 F 5 "TE Connectivity:LR0204F100R" V 1850 2000 60  0001 C CNN "Manufacturer"
@@ -122,7 +122,7 @@ U 1 1 5AD713B4
 P 2600 2550
 F 0 "R12" H 2670 2702 50  0000 L CNN
 F 1 "100k" H 2670 2611 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2530 2550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2530 2550 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 2600 2550 50  0001 C CNN
 F 4 "Farnell:2329853" V 2600 2550 60  0001 C CNN "Vendor"
 F 5 "TE Connectivity:LR0204F100K" V 2600 2550 60  0001 C CNN "Manufacturer"
@@ -161,4 +161,6 @@ F 3 "" H 3900 3150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2600 3200 3200 3200
+Text Notes 1050 3650 0    50   ~ 0
+Put R10 and C13 right next to\ninput connector. The return\nground should be at the connector\nside.
 $EndSCHEMATC
