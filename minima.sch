@@ -153,14 +153,14 @@ F0 "Input amplifier" 60
 F1 "input.sch" 60
 F2 "inp" I L 3300 1800 50 
 F3 "outp" O R 4900 1800 50 
-F4 "sgnd" I L 3300 2000 50 
+F4 "sgnd" I L 3300 1900 50 
 $EndSheet
 Wire Wire Line
 	4900 1800 6400 1800
 Wire Wire Line
-	3000 3200 3000 2000
+	3000 3200 3000 1900
 Wire Wire Line
-	3000 2000 3300 2000
+	3000 1900 3300 1900
 Wire Wire Line
 	6100 3200 6100 2200
 Wire Wire Line
@@ -178,13 +178,10 @@ F 3 "" H 8800 1950 50  0001 C CNN
 	1    8800 2000
 	1    0    0    -1  
 $EndComp
-Connection ~ 3000 2000
 Wire Wire Line
-	3000 2000 2700 2000
+	3000 1900 2700 1900
 Wire Wire Line
-	2800 1900 2700 1900
-Wire Wire Line
-	2800 1900 2800 3200
+	2800 2000 2800 3200
 $Comp
 L power:GNDPWR #PWR02
 U 1 1 5B618FF8
@@ -213,4 +210,7 @@ F 3 "~" H 2950 6700 50  0001 C CNN
 $EndComp
 Text Notes 9100 2150 0    50   ~ 0
 Return speaker ground at the\njunction of bypass capacitors \nnear power IC.
+Wire Wire Line
+	2800 2000 2700 2000
+Connection ~ 3000 1900
 $EndSCHEMATC
