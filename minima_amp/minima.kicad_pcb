@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.0.0)")
+(kicad_pcb (version 20171130) (host pcbnew 5.0.0-fee4fd1~66~ubuntu16.04.1)
 
   (general
     (thickness 1.6)
@@ -3489,7 +3489,7 @@
   (gr_text "20180801\n" (at 110.635 66.74 270) (layer F.Cu) (tstamp 5B67B2CF)
     (effects (font (size 2.2 2.2) (thickness 0.4)))
   )
-  (gr_text " REAL TIME\nCONSULTING" (at 167.785 87.695 270) (layer B.Cu)
+  (gr_text "REAL TIME\nCONSULTING" (at 167.785 87.695 270) (layer B.Cu)
     (effects (font (size 2 1.5) (thickness 0.375)) (justify mirror))
   )
   (gr_text "Minima V1.1" (at 145.56 90.87) (layer F.SilkS) (tstamp 5B6A0F69)
