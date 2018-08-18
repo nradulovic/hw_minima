@@ -1,6 +1,6 @@
 
-.. contents:: Table of Contents
-   :depth: 3
+.. contents::
+
 
 Introduction
 ============
@@ -22,21 +22,23 @@ The input circuit contains:
 Input EMI suppression
 ---------------------
 
-To protect the input from EMI we will use the following Zobel network::
+To protect the input from EMI we will use the following Zobel network:
 
-          + Positive input or negative input
-          |
-         +-+  Rzi
-         | |
-         | |
-         +-+
-          |
-          +----> Toward amplifier input (LP filter)
-          |
-        ----- Czi
-        -----
-          |
-          - Ground
+.. code::
+
+      + Positive input or negative input
+      |
+     +-+  Rzi
+     | |
+     | |
+     +-+
+      |
+      +----> Toward amplifier input (LP filter)
+      |
+    ----- Czi
+    -----
+      |
+      - Ground
          
 For most input cables characteristic impedance falls in range between
 50 and 100ohm impedance and we are using the 75ohm as the middle value. The 
@@ -52,13 +54,15 @@ Input low pass filter
 
 For input filter we choose the frequency between 300kHz and 400kHz.
 
- 		   +---+ Rlp
- 	    >--+   +----+-------> Toward Amplifier IC block
- 		   +---+    |
- 		          ----- Clp
- 		          -----
- 		            |
- 		            - Ground
+.. code::
+
+	   +---+ Rlp
+	>--+   +----+-------> Toward Amplifier IC block
+	   +---+    |
+	          ----- Clp
+	          -----
+	            |
+	            - Ground
 
 Low pass filter components:
   - The series low pass resistor is compromised of 'Rlp' and 'Rzi' in series.
@@ -67,7 +71,9 @@ Low pass filter components:
 .. math::
 
     flp=1/(2*pi*Clp*(Rlp+Rzi))
+    
     flp=1/(2*pi*2.2e-9*(100+100))
+    
     flp=361kHz
 
 The ground loop breaker resistor
@@ -615,3 +621,111 @@ NOTE:
    220V socket.
 
 
+Amplifier controller
+====================
+
+Amplifier controller will control and monitor two amplifiers. It has the
+following components:
+
+ - Power supply undervoltage protection
+ - Power supply overvoltage protection
+ - Power supply imbalance protection
+ - Output DC offset protection
+ - Output clipping protection
+ - Over-temperature protection
+ - Over-current protection
+
+
+Power supply undervoltage protection
+------------------------------------
+
+Power supply overvoltage protection
+-----------------------------------
+
+Power supply imbalance protection
+---------------------------------
+
+Output DC offset protection
+---------------------------
+
+Output clipping protection
+--------------------------
+
+Over-temperature protection
+---------------------------
+
+Over-current protection
+-----------------------
+
+
+Analog inputs
+-------------
+
+
+.. code::
+
+              o  Vdd
+              |
+             +-+
+             | | R2
+             | |
+       R1    +-+
+      +---+   |
+    >-|   |---+------+-> Analog output (to MCU ADC)
+      +---+   |      |
+    Analog   +-+    ---
+    Input    | | R3 --- C1
+             | |     |
+             +-+     V
+              |
+              V
+
+Enviromental parametars:
+  - Power supply: Vdd = 5V
+  - Analog output impedance: Rout <= 10k
+
+Specification:
+  - Analog input range: Ain = +/-40V
+  - Analog input impedance: Rin >= 10k
+
+Equations:
+  (1) Since for 0V Ain we need 2.5V Aout: R2 = R1 || R3
+  (2) Since we need gain 1/16 (5V/80V) we have: 16 = R1 / (R1 || R2 || R3)
+
+This give as two equations with 3 unknowns:
+
+.. math::
+
+    (1 - Gain - 1)*G1 + G2 + G3 = 0
+    
+    Vref * G1 + Vref * G2 + (Vref - Vhigh) * G3 = 0
+
+With Gain = 16, Vreg = 2.5V and Vhigh = 5V we have:
+
+.. math::
+
+    -15G1+G2+G3=0
+    
+    2.5G1+2.5G2-2.5G3=0
+
+Start with G3 = 1/10:
+
+.. math::
+
+    -15G1+G2=-0.1
+    
+    2.5G1+2.5G2=0.25
+
+    G1=1.25e+3 => R1=80kOhm
+    
+    G3=8.75e-2 => R2=11.43kOhm
+
+
+One possibility is to have:
+
+.. math::
+    R1 = 110kOhm
+    R2 = 10kOhm
+    R3 = 11kOhm
+  
+This combination has Gain = 22
