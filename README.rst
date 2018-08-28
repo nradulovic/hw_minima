@@ -734,7 +734,8 @@ One possibility is to have:
 This combination has Gain = 22
 
 Monitor MCU pins
-===
+================
+
 
 +-----------------------+---------------+-----------+---------------------------------------------------+
 | # / Signal name       | Type          | Pic pin   | Description                                       |
@@ -802,8 +803,8 @@ Monitor MCU pins
 | 31. pi_cfg_sensors    | dig in        |           | Configure sensors mode
 +-----------------------+---------------+-----------+---------------------------------------------------+
 
-Hardware configurations:
---
+Hardware configurations
+=======================
 
 1. Power control mode: 
   0 - Disabled, always on
@@ -818,8 +819,8 @@ Hardware configurations:
   0 - Disabled, all temperature sensors are ignored
   1 - Enabled, read all temperature sensors
     
-Software configurations:
---
+Software configurations
+=======================
 
 1. Power supply:
    - nominal value: 20V
