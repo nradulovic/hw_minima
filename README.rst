@@ -822,27 +822,27 @@ Software configurations:
 --
 
 1. Power supply:
-  - nominal value: 20V
-  - minimal value: 15V
-  - maximum value: 25V
-  - imbalance value: 10V
-  - bypass time: 500ms
-  - post bypass time: 500ms
-  - mode, same as HW configuration 1
+   - nominal value: 20V
+   - minimal value: 15V
+   - maximum value: 25V
+   - imbalance value: 10V
+   - bypass time: 500ms
+   - post bypass time: 500ms
+   - mode, same as HW configuration 1
 2. Clipping detector:
-  - clipping min voltage 4: 5
-  - clipping min voltage 8: 3
-  - hold off: 1000ms
-  - timeout to mute: 10s
-  - timeout to shutdown: 20s
-  - mode:
-    0 - Disabled,
-    1 - Enabled
+   - clipping min voltage 4: 5
+   - clipping min voltage 8: 3
+   - hold off: 1000ms
+   - timeout to mute: 10s
+   - timeout to shutdown: 20s
+   - mode:
+     0 - Disabled,
+     1 - Enabled
 3. AC detector:
-  - num of cycles missing: 4
-  - mode, same as HW configuration 2
+   - num of cycles missing: 4
+   - mode, same as HW configuration 2
 4. Impedance detector:
-  - mode, same as HW configuration 3
+   - mode, same as HW configuration 3
 5. Temperature detector:
-  - mode 
+   - mode 
  
