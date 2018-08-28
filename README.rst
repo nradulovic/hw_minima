@@ -56,13 +56,13 @@ For input filter we choose the frequency between 300kHz and 400kHz.
 
 .. code::
 
-	   +---+ Rlp
-	>--+   +----+-------> Toward Amplifier IC block
-	   +---+    |
-			  ----- Clp
-			  -----
-				|
-				- Ground
+       +---+ Rlp
+    >--+   +----+-------> Toward Amplifier IC block
+       +---+    |
+              ----- Clp
+              -----
+                |
+                - Ground
 
 Low pass filter components:
   - The series low pass resistor is compromised of 'Rlp' and 'Rzi' in series.
@@ -263,7 +263,7 @@ Using values from above we get:
     Isn=2.2Aeff
 
     Ri=810mOhm
-	
+    
 The power supply section is using single banks of 10mF capacitors with 0.22Ohm
 resistor in series between bridge rectifier and smoothing capacitors.
 
@@ -726,7 +726,9 @@ One possibility is to have:
 .. math::
 
     R1 = 110kOhm
+    
     R2 = 10kOhm
+
     R3 = 11kOhm
   
 This combination has Gain = 22
@@ -734,78 +736,113 @@ This combination has Gain = 22
 Monitor MCU pins
 ===
 
-	Signal name		| Type			| Pic pin	| Description
-1.	pa_vcc			| analog in		|			| Measures the VCC voltage
-2.	pa_vee			| analog in		|			| Measures the VEE voltage
-3.	pa_ope			| analog in		|           | Measures Output Positive Envelope (Both channels)
-4.	pa_one			| analog in		|			| Measures Output Negative Envelope (Both channels)
-5.	pa_oal			| analog in		|			| Measures Output Average Left
-6.	pa_oar			| analog in		|			| Measures Output Average Right
-7.	pc_ol			| analog/comp in|			| Compares Output Left impedance
-8.	pc_or			| analog/comp in|			| Compares Output Right impedance
-9.	pc_ref			| analog/comp in|			| Comparator reference voltage
-10.	pc_i2c_scl		| i2c scl		|			| Sensor network SCL
-11.	pc_i2c_sda		| i2c sda		|			| Sensor network SDA
-12.	pc_uart_rx		| uart rx		|			| Service terminal RX
-13. pc_uart_tx		| uart tx		|			| Service terminal TX
-14. po_comp_en		| dig out		|			| Enable comparator current sources
-15. po_ctrl_power	| dig out		|			| Control power relay
-16. po_ctrl_pbypass	| dig out		|			| Control power bypass relay
-17. po_ctrl_mute	| dig out		|			| Control mute relay
-18. po_ctrl_enable  | dig out       |           | Control power amplifier enable
-19. po_ind_power_a  | dig out		|			| Indicator power/status LED, pin A
-20. po_ind_power_b  | dig out		|			| Indicator power/status LED, pin B
-21. po_ind_overload | dig out		|			| Indicator overload LED
-22. po_status		| dig out       |           | Status LED on board
-23. pi_key_power    | dig in		|			| Power key
-24. pi_key_mute		| dig in        |			| Mute key
-25. pi_det_ac_power | dig in		|			| AC power detection
-26. pi_det_overload | dig in		|			| Overload detection
-27. pi_det_signal	| dig in		|			| Signal detection
-28. pi_cfg_power	| dig in		|			| Configure power control mode
-29. pi_cfg_ac_power | dig in		|			| Configure AC power detection mode
-30. pi_cfg_impedance| dig in		|			| Configure Impedance monitoring mode
-31. pi_cfg_sensors	| dig in		|			| Configure sensors mode
++-----------------------+---------------+-----------+---------------------------------------------------+
+| # / Signal name       | Type          | Pic pin   | Description                                       |
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 1. pa_vcc             | analog in     |           | Measures the VCC voltage
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 2. pa_vee             | analog in     |           | Measures the VEE voltage
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 3. pa_ope             | analog in     |           | Measures Output Positive Envelope (Both channels)
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 4. pa_one             | analog in     |           | Measures Output Negative Envelope (Both channels)
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 5. pa_oal             | analog in     |           | Measures Output Average Left
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 6. pa_oar             | analog in     |           | Measures Output Average Right
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 7. pc_ol              | analog/comp in|           | Compares Output Left impedance
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 8. pc_or              | analog/comp in|           | Compares Output Right impedance
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 9. pc_ref             | analog/comp in|           | Comparator reference voltage
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 10. pc_i2c_scl        | i2c scl       |           | Sensor network SCL
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 11. pc_i2c_sda        | i2c sda       |           | Sensor network SDA
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 12. pc_uart_rx        | uart rx       |           | Service terminal RX
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 13. pc_uart_tx        | uart tx       |           | Service terminal TX
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 14. po_comp_en        | dig out       |           | Enable comparator current sources
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 15. po_ctrl_power     | dig out       |           | Control power relay
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 16. po_ctrl_pbypass   | dig out       |           | Control power bypass relay
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 17. po_ctrl_mute      | dig out       |           | Control mute relay
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 18. po_ctrl_enable    | dig out       |           | Control power amplifier enable
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 19. po_ind_power_a    | dig out       |           | Indicator power/status LED, pin A
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 20. po_ind_power_b    | dig out       |           | Indicator power/status LED, pin B
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 21. po_ind_overload   | dig out       |           | Indicator overload LED
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 22. po_status         | dig out       |           | Status LED on board
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 23. pi_key_power      | dig in        |           | Power key
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 24. pi_key_mute       | dig in        |           | Mute key
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 25. pi_det_ac_power   | dig in        |           | AC power detection
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 26. pi_det_overload   | dig in        |           | Overload detection
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 27. pi_det_signal     | dig in        |           | Signal detection
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 28. pi_cfg_power      | dig in        |           | Configure power control mode
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 29. pi_cfg_ac_power   | dig in        |           | Configure AC power detection mode
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 30. pi_cfg_impedance  | dig in        |           | Configure Impedance monitoring mode
++-----------------------+---------------+-----------+---------------------------------------------------+
+| 31. pi_cfg_sensors    | dig in        |           | Configure sensors mode
++-----------------------+---------------+-----------+---------------------------------------------------+
 
 Hardware configurations:
+--
 
 1. Power control mode: 
-	0 - Disabled, always on
-	1 - Enabled, wait for Power on event
+  0 - Disabled, always on
+  1 - Enabled, wait for Power on event
 2. AC power detection mode: 
-    0 - Disabled, AC always present 
-	1 - Enabled, AC detect on
+  0 - Disabled, AC always present 
+  1 - Enabled, AC detect on
 3. Impedance monitoring mode:
-    0 - Disabled, always allow power on
-	1 - Enabled, dissallow power on when impedance is out of minimal limit
+  0 - Disabled, always allow power on
+  1 - Enabled, dissallow power on when impedance is out of minimal limit
 4. Sensors mode:
-    0 - Disabled, all temperature sensors are ignored
-	1 - Enabled, read all temperature sensors
-	
+  0 - Disabled, all temperature sensors are ignored
+  1 - Enabled, read all temperature sensors
+    
 Software configurations:
+--
 
 1. Power supply:
-	- nominal value: 20V
-	- minimal value: 15V
-	- maximum value: 25V
-    - imbalance value: 10V
-	- bypass time: 500ms
-	- post bypass time: 500ms
-	- mode, same as HW configuration 1
+  - nominal value: 20V
+  - minimal value: 15V
+  - maximum value: 25V
+  - imbalance value: 10V
+  - bypass time: 500ms
+  - post bypass time: 500ms
+  - mode, same as HW configuration 1
 2. Clipping detector:
-	- clipping min voltage 4: 5
-	- clipping min voltage 8: 3
-	- hold off: 1000ms
-	- timeout to mute: 10s
-	- timeout to shutdown: 20s
-	- mode:
-		0 - Disabled,
-		1 - Enabled
+  - clipping min voltage 4: 5
+  - clipping min voltage 8: 3
+  - hold off: 1000ms
+  - timeout to mute: 10s
+  - timeout to shutdown: 20s
+  - mode:
+    0 - Disabled,
+    1 - Enabled
 3. AC detector:
-    - num of cycles missing: 4
-	- mode, same as HW configuration 2
+  - num of cycles missing: 4
+  - mode, same as HW configuration 2
 4. Impedance detector:
-    - mode, same as HW configuration 3
+  - mode, same as HW configuration 3
 5. Temperature detector:
-    - 
+  - mode 
  
