@@ -740,67 +740,67 @@ Monitor MCU pins
 +-----------------------+---------------+-----------+---------------------------------------------------+
 | # / Signal name       | Type          | Pic pin   | Description                                       |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 1. pa_vcc             | analog in     |           | Measures the VCC voltage                          |
+| 1. pa_vcc             | analog in     | RD0       | Measures the VCC voltage                          |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 2. pa_vee             | analog in     |           | Measures the VEE voltage                          |
+| 2. pa_vee             | analog in     | RD1       | Measures the VEE voltage                          |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 3. pa_ope             | analog in     |           | Measures Output Positive Envelope (Both channels) |
+| 3. pa_ope             | analog in     | RA5       | Measures Output Positive Envelope (Both channels) |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 4. pa_one             | analog in     |           | Measures Output Negative Envelope (Both channels) |
+| 4. pa_one             | analog in     | RE0       | Measures Output Negative Envelope (Both channels) |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 5. pa_oal             | analog in     |           | Measures Output Average Left                      |
+| 5. pa_oal             | analog in     | RE1       | Measures Output Average Left                      |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 6. pa_oar             | analog in     |           | Measures Output Average Right                     |
+| 6. pa_oar             | analog in     | RE2       | Measures Output Average Right                     |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 7. pc_ol              | analog/comp in|           | Compares Output Left impedance                    |
+| 7. pc_ol              | analog/comp in| RA0       | Compares Output Left impedance                    |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 8. pc_or              | analog/comp in|           | Compares Output Right impedance                   |
+| 8. pc_or              | analog/comp in| RA1       | Compares Output Right impedance                   |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 9. pc_ref             | analog/comp in|           | Comparator reference voltage                      |
+| 9. pc_ref             | analog/comp in| RA3       | Comparator reference voltage                      |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 10. pc_i2c_scl        | i2c scl       |           | Sensor network SCL                                |
+| 10. pc_i2c_scl        | i2c scl       | RC3       | Sensor network SCL                                |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 11. pc_i2c_sda        | i2c sda       |           | Sensor network SDA                                |
+| 11. pc_i2c_sda        | i2c sda       | RC4       | Sensor network SDA                                |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 12. pc_uart_rx        | uart rx       |           | Service terminal RX                               |
+| 12. pc_uart_rx        | uart rx       | RC7       | Service terminal RX                               |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 13. pc_uart_tx        | uart tx       |           | Service terminal TX                               |
+| 13. pc_uart_tx        | uart tx       | RC6       | Service terminal TX                               |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 14. po_comp_en        | dig out       |           | Enable comparator current sources                 |
+| 14. po_comp_en        | dig out       | RA2       | Enable comparator current sources                 |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 15. po_ctrl_power     | dig out       |           | Control power relay                               |
+| 15. po_ctrl_power     | dig out       | RD2       | Control power relay                               |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 16. po_ctrl_pbypass   | dig out       |           | Control power bypass relay                        |
+| 16. po_ctrl_pbypass   | dig out       | RD3       | Control power bypass relay                        |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 17. po_ctrl_mute      | dig out       |           | Control mute relay                                |
+| 17. po_ctrl_mute      | dig out       | RC5       | Control mute relay                                |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 18. po_ctrl_enable    | dig out       |           | Control power amplifier enable                    |
+| 18. po_ctrl_enable    | dig out       | RD4       | Control power amplifier enable                    |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 19. po_ind_power_a    | dig out       |           | Indicator power/status LED, pin A                 |
+| 19. po_ind_power_a    | dig out       | RD5       | Indicator power/status LED, pin A                 |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 20. po_ind_power_b    | dig out       |           | Indicator power/status LED, pin B                 |
+| 20. po_ind_power_b    | dig out       | RD6       | Indicator power/status LED, pin B                 |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 21. po_ind_overload   | dig out       |           | Indicator overload LED                            |
+| 21. po_ind_overload   | dig out       | RD7       | Indicator overload LED                            |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 22. po_status         | dig out       |           | Status LED on board                               |
+| 22. po_status         | dig out       | RB2       | Status LED on board                               |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 23. pi_key_power      | dig in        |           | Power key                                         |
+| 23. pi_key_power      | dig in        | RB0       | Power key                                         |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 24. pi_key_mute       | dig in        |           | Mute key                                          |
+| 24. pi_key_mute       | dig in        | RB1       | Mute key                                          |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 25. pi_det_ac_power   | dig in        |           | AC power detection                                |
+| 25. pi_det_ac_power   | dig in        | RB5       | AC power detection                                |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 26. pi_det_overload   | dig in        |           | Overload detection                                |
+| 26. pi_det_overload   | dig in        | RB4       | Overload detection                                |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 27. pi_det_signal     | dig in        |           | Signal detection                                  |
+| 27. pi_det_signal     | dig in        | RB3       | Signal detection                                  |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 28. pi_cfg_power      | dig in        |           | Configure power control mode                      |
+| 28. pi_cfg_power      | dig in        | RA4       | Configure power control mode                      |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 29. pi_cfg_ac_power   | dig in        |           | Configure AC power detection mode                 |
+| 29. pi_cfg_ac_power   | dig in        | RC0       | Configure AC power detection mode                 |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 30. pi_cfg_impedance  | dig in        |           | Configure Impedance monitoring mode               |
+| 30. pi_cfg_impedance  | dig in        | RC1       | Configure Impedance monitoring mode               |
 +-----------------------+---------------+-----------+---------------------------------------------------+
-| 31. pi_cfg_sensors    | dig in        |           | Configure sensors mode                            |
+| 31. pi_cfg_sensors    | dig in        | RC2       | Configure sensors mode                            |
 +-----------------------+---------------+-----------+---------------------------------------------------+
 
 Hardware configurations
@@ -846,4 +846,14 @@ Software configurations
    - mode, same as HW configuration 3
 5. Temperature detector:
    - mode 
+   
+Chassis
+=======
+
+Component hight
+---------------
+
+Power supply capacitors on amplifier boards: 35.5mm (2.2mF)
+                                             25mm (1mF)
+Power supply capacitors on PSU board: 30mm (6.8mF)
  
