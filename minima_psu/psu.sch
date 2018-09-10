@@ -1,0 +1,582 @@
+EESchema Schematic File Version 4
+LIBS:minima_psu-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C C?
+U 1 1 5B6E417C
+P 3400 1750
+F 0 "C?" H 3515 1887 50  0000 L CNN
+F 1 "470n" H 3515 1796 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2" H 3438 1600 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/815363.pdf" H 3400 1750 50  0001 C CNN
+F 4 "WIMA:MKS2D034701E00KSSD" H 3400 1750 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:1006037" H 3400 1750 50  0001 C CNN "Vendor"
+F 6 "PET" H 3515 1705 50  0000 L CNN "Type"
+F 7 "100V" H 3515 1614 50  0000 L CNN "Voltage"
+	1    3400 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B6E4183
+P 3400 2150
+F 0 "R?" H 3470 2196 50  0000 L CNN
+F 1 "R" H 3470 2105 50  0000 L CNN
+F 2 "" V 3330 2150 50  0001 C CNN
+F 3 "~" H 3400 2150 50  0001 C CNN
+	1    3400 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B6E418A
+P 3400 2650
+F 0 "R?" H 3470 2696 50  0000 L CNN
+F 1 "R" H 3470 2605 50  0000 L CNN
+F 2 "" V 3330 2650 50  0001 C CNN
+F 3 "~" H 3400 2650 50  0001 C CNN
+	1    3400 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2300 3400 2400
+Wire Wire Line
+	3400 2000 3400 1900
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 5B6E4193
+P 2200 2400
+F 0 "J?" H 2120 2717 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 2120 2626 50  0000 C CNN
+F 2 "" H 2200 2400 50  0001 C CNN
+F 3 "~" H 2200 2400 50  0001 C CNN
+	1    2200 2400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1600 3400 1500
+Wire Wire Line
+	3400 1500 2900 1500
+Wire Wire Line
+	2900 1500 2900 2300
+Wire Wire Line
+	2900 2300 2400 2300
+Wire Wire Line
+	2400 2400 3400 2400
+Connection ~ 3400 2400
+Wire Wire Line
+	3400 2400 3400 2500
+Wire Wire Line
+	2400 2500 2900 2500
+Wire Wire Line
+	2900 2500 2900 3300
+Wire Wire Line
+	2900 3300 3400 3300
+Wire Wire Line
+	3400 3300 3400 3200
+Wire Wire Line
+	3400 2900 3400 2800
+$Comp
+L Device:D_Bridge_+-AA D?
+U 1 1 5B6E41A6
+P 4400 2400
+F 0 "D?" H 4741 2446 50  0000 L CNN
+F 1 "D_Bridge_+-AA" H 4741 2355 50  0000 L CNN
+F 2 "" H 4400 2400 50  0001 C CNN
+F 3 "~" H 4400 2400 50  0001 C CNN
+	1    4400 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3300 4400 3300
+Wire Wire Line
+	4400 3300 4400 2700
+Connection ~ 3400 3300
+Wire Wire Line
+	4400 2100 4400 1500
+Wire Wire Line
+	4400 1500 3400 1500
+Connection ~ 3400 1500
+$Comp
+L Device:CP1 C?
+U 1 1 5B6E41B6
+P 4900 2650
+F 0 "C?" H 5015 2741 50  0000 L CNN
+F 1 "6m8" H 5015 2650 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D26.0mm_P10.00mm_SnapIn" H 4900 2650 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2045874.pdf" H 4900 2650 50  0001 C CNN
+F 4 "Vishay:MAL225630682E3" H 4900 2650 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:2474575" H 4900 2650 50  0001 C CNN "Vendor"
+F 6 "35V" H 5015 2559 50  0000 L CNN "Voltage"
+	1    4900 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2400 4900 2400
+Wire Wire Line
+	4900 2400 4900 2500
+Wire Wire Line
+	3900 2400 3900 3400
+Wire Wire Line
+	3900 3400 4900 3400
+Wire Wire Line
+	4900 3400 4900 3300
+Wire Wire Line
+	3900 2400 4100 2400
+Wire Wire Line
+	4900 3000 4900 2900
+$Comp
+L Device:R R?
+U 1 1 5B6E41C4
+P 5400 2650
+F 0 "R?" H 5470 2696 50  0000 L CNN
+F 1 "R" H 5470 2605 50  0000 L CNN
+F 2 "" V 5330 2650 50  0001 C CNN
+F 3 "~" H 5400 2650 50  0001 C CNN
+	1    5400 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2500 5400 2400
+Wire Wire Line
+	5400 2400 4900 2400
+Connection ~ 4900 2400
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B6E41CE
+P 3500 2400
+F 0 "#PWR?" H 3500 2200 50  0001 C CNN
+F 1 "GNDPWR" V 3505 2292 50  0000 R CNN
+F 2 "" H 3500 2350 50  0001 C CNN
+F 3 "" H 3500 2350 50  0001 C CNN
+	1    3500 2400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3500 2400 3400 2400
+$Comp
+L Device:R R?
+U 1 1 5B6E41D5
+P 5400 3150
+F 0 "R?" H 5470 3196 50  0000 L CNN
+F 1 "R" H 5470 3105 50  0000 L CNN
+F 2 "" V 5330 3150 50  0001 C CNN
+F 3 "~" H 5400 3150 50  0001 C CNN
+	1    5400 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3400 5400 3400
+Wire Wire Line
+	5400 3400 5400 3300
+Connection ~ 4900 3400
+Wire Wire Line
+	5400 3000 5400 2900
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B6E41E0
+P 4800 2900
+F 0 "#PWR?" H 4800 2700 50  0001 C CNN
+F 1 "GNDPWR" V 4804 2791 50  0000 R CNN
+F 2 "" H 4800 2850 50  0001 C CNN
+F 3 "" H 4800 2850 50  0001 C CNN
+	1    4800 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4800 2900 4900 2900
+Connection ~ 4900 2900
+Wire Wire Line
+	4900 2900 4900 2800
+Wire Wire Line
+	4900 2900 5400 2900
+Connection ~ 5400 2900
+Wire Wire Line
+	5400 2900 5400 2800
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 5B6E41EC
+P 7200 2500
+F 0 "J?" H 7280 2542 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 7280 2451 50  0000 L CNN
+F 2 "" H 7200 2500 50  0001 C CNN
+F 3 "~" H 7200 2500 50  0001 C CNN
+	1    7200 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2900 6400 2900
+Wire Wire Line
+	6400 2900 6400 2500
+Wire Wire Line
+	6400 2500 7000 2500
+Connection ~ 5400 2400
+Wire Wire Line
+	7000 2600 6900 2600
+Wire Wire Line
+	6900 2600 6900 3400
+Wire Wire Line
+	6900 3400 5400 3400
+Connection ~ 5400 3400
+Wire Wire Line
+	5400 2400 5900 2400
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 5B6E41FC
+P 7200 3300
+F 0 "J?" H 7280 3342 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 7280 3251 50  0000 L CNN
+F 2 "" H 7200 3300 50  0001 C CNN
+F 3 "~" H 7200 3300 50  0001 C CNN
+	1    7200 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 3200 5900 3200
+Wire Wire Line
+	5900 3200 5900 2400
+Connection ~ 5900 2400
+Wire Wire Line
+	5900 2400 7000 2400
+Wire Wire Line
+	6400 2900 6400 3300
+Wire Wire Line
+	6400 3300 7000 3300
+Connection ~ 6400 2900
+Wire Wire Line
+	7000 3400 6900 3400
+Connection ~ 6900 3400
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 5B6E420C
+P 2200 4800
+F 0 "J?" H 2120 5117 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 2120 5026 50  0000 C CNN
+F 2 "" H 2200 4800 50  0001 C CNN
+F 3 "~" H 2200 4800 50  0001 C CNN
+	1    2200 4800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5B6E4213
+P 3900 4900
+F 0 "#PWR?" H 3900 4650 50  0001 C CNN
+F 1 "Earth" H 3900 4750 50  0001 C CNN
+F 2 "" H 3900 4900 50  0001 C CNN
+F 3 "~" H 3900 4900 50  0001 C CNN
+	1    3900 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5B6E4219
+P 2200 5900
+F 0 "#PWR?" H 2200 5650 50  0001 C CNN
+F 1 "Earth" H 2200 5750 50  0001 C CNN
+F 2 "" H 2200 5900 50  0001 C CNN
+F 3 "~" H 2200 5900 50  0001 C CNN
+	1    2200 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B6E4223
+P 2550 5900
+F 0 "R?" V 2161 5900 50  0000 C CNN
+F 1 "10" V 2252 5900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0918_L18.0mm_D9.0mm_P22.86mm_Horizontal" V 2480 5900 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2045934.pdf" H 2550 5900 50  0001 C CNN
+F 4 "Vishay:AC05000001009JAC00" V 2550 5900 50  0001 C CNN "Manufacturer:"
+F 5 "Farnel:1735130" V 2550 5900 50  0001 C CNN "Vendor"
+F 6 "W" V 2343 5900 50  0000 C CNN "Type"
+F 7 "5W" V 2434 5900 50  0000 C CNN "Power"
+	1    2550 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B6E422E
+P 2550 6400
+F 0 "C?" V 2116 6400 50  0000 C CNN
+F 1 "100n" V 2207 6400 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L26.5mm_W10.5mm_P22.50mm_MKS4" H 2588 6250 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2237778.pdf" H 2550 6400 50  0001 C CNN
+F 4 "Vishay:BFC233860104" V 2550 6400 50  0001 C CNN "Manufacturer:"
+F 5 "Farnell:1166503" V 2550 6400 50  0001 C CNN "Vendor"
+F 6 "PP Y2" V 2298 6400 50  0000 C CNN "Type"
+F 7 "300Vac" V 2389 6400 50  0000 C CNN "Voltage"
+	1    2550 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5B6E4235
+P 2550 6900
+F 0 "D?" H 2550 7116 50  0000 C CNN
+F 1 "D" H 2550 7025 50  0000 C CNN
+F 2 "" H 2550 6900 50  0001 C CNN
+F 3 "~" H 2550 6900 50  0001 C CNN
+	1    2550 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5B6E423C
+P 2550 7400
+F 0 "D?" H 2550 7184 50  0000 C CNN
+F 1 "D" H 2550 7275 50  0000 C CNN
+F 2 "" H 2550 7400 50  0001 C CNN
+F 3 "~" H 2550 7400 50  0001 C CNN
+	1    2550 7400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2200 5900 2300 5900
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B6E4244
+P 2900 5900
+F 0 "#PWR?" H 2900 5700 50  0001 C CNN
+F 1 "GNDPWR" V 2905 5792 50  0000 R CNN
+F 2 "" H 2900 5850 50  0001 C CNN
+F 3 "" H 2900 5850 50  0001 C CNN
+	1    2900 5900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 7400 2300 7400
+Wire Wire Line
+	2300 7400 2300 6900
+Connection ~ 2300 5900
+Wire Wire Line
+	2300 5900 2400 5900
+Wire Wire Line
+	2700 7400 2800 7400
+Wire Wire Line
+	2800 7400 2800 6900
+Wire Wire Line
+	2800 5900 2700 5900
+Wire Wire Line
+	2900 5900 2800 5900
+Connection ~ 2800 5900
+Wire Wire Line
+	2400 6400 2300 6400
+Connection ~ 2300 6400
+Wire Wire Line
+	2300 6400 2300 5900
+Wire Wire Line
+	2400 6900 2300 6900
+Connection ~ 2300 6900
+Wire Wire Line
+	2300 6900 2300 6400
+Wire Wire Line
+	2700 6900 2800 6900
+Connection ~ 2800 6900
+Wire Wire Line
+	2800 6900 2800 6400
+Wire Wire Line
+	2700 6400 2800 6400
+Connection ~ 2800 6400
+Wire Wire Line
+	2800 6400 2800 5900
+Wire Wire Line
+	2400 4800 3400 4800
+$Comp
+L Device:C C?
+U 1 1 5B6E4264
+P 3400 4550
+F 0 "C?" H 3515 4687 50  0000 L CNN
+F 1 "22n" H 3515 4596 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3" H 3438 4400 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2237778.pdf" H 3400 4550 50  0001 C CNN
+F 4 "Vishay:BFC233860223" H 3400 4550 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:1166495" H 3400 4550 50  0001 C CNN "Vendor"
+F 6 "PP Y2" H 3515 4505 50  0000 L CNN "Type"
+F 7 "300Vac" H 3515 4414 50  0000 L CNN "Voltage"
+	1    3400 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4700 2900 4700
+Wire Wire Line
+	2900 4700 2900 4300
+Wire Wire Line
+	2900 4300 3400 4300
+Wire Wire Line
+	3400 4300 3400 4400
+Wire Wire Line
+	2400 4900 2900 4900
+Wire Wire Line
+	2900 4900 2900 5300
+Wire Wire Line
+	2900 5300 3400 5300
+Wire Wire Line
+	3400 5300 3400 5200
+Wire Wire Line
+	3400 4900 3400 4800
+Connection ~ 3400 4800
+Wire Wire Line
+	3400 4700 3400 4800
+Text Label 3000 5300 0    50   ~ 0
+ac_n
+Text Label 3000 4300 0    50   ~ 0
+ac_l
+Text Label 6200 2400 0    50   ~ 0
+vcc
+Text Label 6200 3400 0    50   ~ 0
+vee
+Wire Wire Line
+	3900 4300 3400 4300
+Connection ~ 3400 4300
+Connection ~ 3400 5300
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5B6E427D
+P 2200 3900
+F 0 "J?" H 2120 4117 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 2120 4026 50  0000 C CNN
+F 2 "" H 2200 3900 50  0001 C CNN
+F 3 "~" H 2200 3900 50  0001 C CNN
+	1    2200 3900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 4300 3900 4000
+Wire Wire Line
+	3900 4000 2400 4000
+Connection ~ 3900 4300
+Wire Wire Line
+	2400 3900 4400 3900
+Wire Wire Line
+	4400 3900 4400 4300
+Wire Wire Line
+	4400 4300 4300 4300
+Wire Wire Line
+	3900 4300 4000 4300
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 5B6E428B
+P 5600 4800
+F 0 "J?" H 5680 4842 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 5680 4751 50  0000 L CNN
+F 2 "" H 5600 4800 50  0001 C CNN
+F 3 "~" H 5600 4800 50  0001 C CNN
+	1    5600 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4700 4900 4700
+Wire Wire Line
+	4900 4700 4900 4300
+Wire Wire Line
+	4900 4300 4400 4300
+Connection ~ 4400 4300
+Wire Wire Line
+	4900 5300 4900 4900
+Wire Wire Line
+	4900 4900 5400 4900
+$Comp
+L Device:C C?
+U 1 1 5B6E429C
+P 3400 5050
+F 0 "C?" H 3515 5187 50  0000 L CNN
+F 1 "22n" H 3515 5096 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3" H 3438 4900 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2237778.pdf" H 3400 5050 50  0001 C CNN
+F 4 "Vishay:BFC233860223" H 3400 5050 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:1166495" H 3400 5050 50  0001 C CNN "Vendor"
+F 6 "PP Y2" H 3515 5005 50  0000 L CNN "Type"
+F 7 "300Vac" H 3515 4914 50  0000 L CNN "Voltage"
+	1    3400 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B6E42A7
+P 4150 4300
+F 0 "C?" V 3700 4300 50  0000 C CNN
+F 1 "22n" V 3800 4300 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3" H 4188 4150 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2237778.pdf" H 4150 4300 50  0001 C CNN
+F 4 "Vishay:BFC233860223" H 4150 4300 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:1166495" H 4150 4300 50  0001 C CNN "Vendor"
+F 6 "PP Y2" V 3900 4300 50  0000 C CNN "Type"
+F 7 "300Vac" V 4000 4300 50  0000 C CNN "Voltage"
+	1    4150 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B6E42B2
+P 4400 4550
+F 0 "C?" H 4285 4413 50  0000 R CNN
+F 1 "470n" H 4285 4504 50  0000 R CNN
+F 2 "Capacitor_THT:C_Rect_L18.0mm_W11.0mm_P15.00mm_FKS3_FKP3" H 4438 4400 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2047268.pdf" H 4400 4550 50  0001 C CNN
+F 4 "Vishay:BFC233922474" V 4400 4550 50  0001 C CNN "Manufacturer:"
+F 5 "Farnell:1413841" V 4400 4550 50  0001 C CNN "Vendor"
+F 6 "PP X2" H 4285 4595 50  0000 R CNN "Type"
+F 7 "310Vac" H 4285 4686 50  0000 R CNN "Voltage"
+	1    4400 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5B6E42BD
+P 3400 3050
+F 0 "C?" H 3515 3187 50  0000 L CNN
+F 1 "470n" H 3515 3096 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2" H 3438 2900 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/815363.pdf" H 3400 3050 50  0001 C CNN
+F 4 "WIMA:MKS2D034701E00KSSD" H 3400 3050 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:1006037" H 3400 3050 50  0001 C CNN "Vendor"
+F 6 "PET" H 3515 3005 50  0000 L CNN "Type"
+F 7 "100V" H 3515 2914 50  0000 L CNN "Voltage"
+	1    3400 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C?
+U 1 1 5B6E42C7
+P 4900 3150
+F 0 "C?" H 5015 3241 50  0000 L CNN
+F 1 "6m8" H 5015 3150 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D26.0mm_P10.00mm_SnapIn" H 4900 3150 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2045874.pdf" H 4900 3150 50  0001 C CNN
+F 4 "Vishay:MAL225630682E3" H 4900 3150 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:2474575" H 4900 3150 50  0001 C CNN "Vendor"
+F 6 "35V" H 5015 3059 50  0000 L CNN "Voltage"
+	1    4900 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 4800 3900 4800
+Wire Wire Line
+	3400 5300 4400 5300
+Wire Wire Line
+	4400 4400 4400 4300
+Wire Wire Line
+	4400 4700 4400 5300
+Connection ~ 4400 5300
+Wire Wire Line
+	4400 5300 4900 5300
+Wire Wire Line
+	3900 4900 3900 4800
+Connection ~ 3900 4800
+Wire Wire Line
+	3900 4800 5400 4800
+$EndSCHEMATC
