@@ -20,7 +20,7 @@ The input circuit contains:
  - The ground loop breaker resistor
 
 Input EMI suppression
----------------------
+`````````````````````
 
 To protect the input from EMI we will use the following Zobel network:
 
@@ -50,7 +50,7 @@ input connector. This capacitor will shunt radio and other interfirence signal
 into the Chassis Ground potential.
 
 Input low pass filter
----------------------
+`````````````````````
 
 For input filter we choose the frequency between 300kHz and 400kHz.
 
@@ -77,7 +77,10 @@ Low pass filter components:
     flp=361kHz
 
 The ground loop breaker resistor
---------------------------------
+````````````````````````````````
+
+A ground loop breaker resistor is located between SGND and GNDPWR grounds. The
+value of this resistor should be around 10 ohms.
 
 Power amplifier
 ===============
@@ -152,7 +155,7 @@ Resistors with power dissipation of 3 Watts is a good and very conservative
 choice.
 
 Power dissipation
------------------
+`````````````````
 
 NOTE:
 
@@ -177,21 +180,19 @@ Maximum voltages at:
  * Case temperature is 60C degrees.
  * Taking into account OPS SOA.
 
-+-------------+-------------+-----------+--------------+-------------+-----------+--------------+
-| Zload [ohm] | Vsupply [V] | Vdrop [V] | Pdiss [W]    | Vsupply [V] | Vdrop [V] | Pdiss [W]    |
-+-------------+-------------+-----------+--------------+-------------+-----------+--------------+
-| Chip        |                LM3886                  |                LM1875                  |
-+-------------+-------------+-----------+--------------+-------------+-----------+--------------+
-| 16          | 33          | 2.2       | 31.4         | 26          | 2.2       | 19.1         |
-+-------------+-------------+-----------+--------------+-------------+-----------+--------------+
-| 12          | 29          | 2.3       | 31.6         | 24          | 2.6       | 21.1         |
-+-------------+-------------+-----------+--------------+-------------+-----------+--------------+
-| 8           | 25          | 2.5       | 34.2         | 23          | 4.4       | 26.8         |
-+-------------+-------------+-----------+--------------+-------------+-----------+--------------+
-| 6           | 22          | 2.6       | 34.7         | 21          | 4.6       | 28.9         |
-+-------------+-------------+-----------+--------------+-------------+-----------+--------------+
-| 4           | 19          | 2.9       | 37.4         | 16          | 5.2       | 22.6         |
-+-------------+-------------+-----------+--------------+-------------+-----------+--------------+
++-------------+-------------+-----------+--------------+
+| Zload [ohm] | Vsupply [V] | Vdrop [V] | Pdiss [W]    |
++-------------+-------------+-----------+--------------+
+| 16          | 26          | 2.2       | 19.1         |
++-------------+-------------+-----------+--------------+
+| 12          | 24          | 2.6       | 21.1         |
++-------------+-------------+-----------+--------------+
+| 8           | 23          | 4.4       | 26.8         |
++-------------+-------------+-----------+--------------+
+| 6           | 21          | 4.6       | 28.9         |
++-------------+-------------+-----------+--------------+
+| 4           | 16          | 5.2       | 22.6         |
++-------------+-------------+-----------+--------------+
 
 This table tells us that if we want to drive 4ohm load at 26V we need 4 pieces
 of LM1875 in parallel. This is quite a number of ICs, but fortunately, the
@@ -201,6 +202,9 @@ supply and music signals. We have to take into account how much energy is
 stored in power supply capacitors and how much will the transformer voltages 
 sag under these conditions and that music signal has much lower effective power
 comparing to instantaneous power.
+
+Power supply
+============
 
 Parallel chip solution
 ----------------------
@@ -802,28 +806,45 @@ Monitor MCU pins
 +-----------------------+---------------+-----------+-----------+---------------------------------------------------+
 | 31. pi_cfg_sensors    | dig in        | RD6       |           | Configure sensors mode                            | 
 +-----------------------+---------------+-----------+-----------+---------------------------------------------------+
+| 32.                   |               | RD7       |           |                                                   | 
++-----------------------+---------------+-----------+-----------+---------------------------------------------------+
+| 33.                   |               | RE0       |           |                                                   | 
++-----------------------+---------------+-----------+-----------+---------------------------------------------------+
+| 34.                   |               | RE1       |           |                                                   | 
++-----------------------+---------------+-----------+-----------+---------------------------------------------------+
+| 35.                   |               | RE2       |           |                                                   | 
++-----------------------+---------------+-----------+-----------+---------------------------------------------------+
 
 
 Hardware configurations
 =======================
 
 1. Power control mode: 
+
   0 - Disabled, always on
   1 - Enabled, wait for Power on event
+
 2. AC power detection mode: 
+
   0 - Disabled, AC always present 
   1 - Enabled, AC detect on
+
 3. Impedance monitoring mode:
+
   0 - Disabled, always allow power on
   1 - Enabled, dissallow power on when impedance is out of minimal limit
+
 4. Sensors mode:
+
   0 - Disabled, all temperature sensors are ignored
   1 - Enabled, read all temperature sensors
     
+
 Software configurations
 =======================
 
 1. Power supply:
+
    - nominal value: 20V
    - minimal value: 15V
    - maximum value: 25V
@@ -831,30 +852,44 @@ Software configurations
    - bypass time: 500ms
    - post bypass time: 500ms
    - mode, same as HW configuration 1
+
 2. Clipping detector:
+
    - clipping min voltage 4: 5
    - clipping min voltage 8: 3
    - hold off: 1000ms
    - timeout to mute: 10s
    - timeout to shutdown: 20s
    - mode:
+
      0 - Disabled,
      1 - Enabled
+
 3. AC detector:
+
    - num of cycles missing: 4
    - mode, same as HW configuration 2
+
 4. Impedance detector:
+
    - mode, same as HW configuration 3
+
 5. Temperature detector:
+
    - mode 
    
 Chassis
 =======
 
-Component hight
----------------
+Component height
+----------------
 
-Power supply capacitors on amplifier boards: 35.5mm (2.2mF)
-                                             25mm (1mF)
-Power supply capacitors on PSU board: 30mm (6.8mF)
+Power supply capacitors on amplifier boards: 
+
+  * 35.5mm (2.2mF)
+  * 25mm (1mF)
+
+Power supply capacitors on PSU board:
+
+  * 30mm (6.8mF)
  
