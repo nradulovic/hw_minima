@@ -1,3 +1,6 @@
 [submodule "minima_psu/spice_root"]
 	path = minima_psu/spice_root
 	url = https://gitlab.com/nradulovic/spice_root.git
+[submodule "minima_amp/spice_root"]
+	path = minima_amp/spice_root
+	url = https://gitlab.com/nradulovic/spice_root.git
