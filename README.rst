@@ -1,5 +1,6 @@
 
-.. contents::
+.. contents:: Table of Contents
+   :depth: 3
 
 
 Introduction
@@ -40,11 +41,12 @@ To protect the input from EMI we will use the following Zobel network:
     -----
       |
       - Ground
-         
+
+
 For most input cables characteristic impedance falls in range between
-50 and 100ohm impedance and we are using the 75ohm as the middle value. The 
-resistor Rzi is ``Rzi=100ohm`` and the capacitor Czi is ``Czi=220pF``. 
-This network should be placed right at the input PCB connector.
+50 and 100ohm impedance. The resistor Rzi is ``Rzi=100ohm`` and the capacitor 
+Czi is ``Czi=220pF``. This network should be placed right at the input PCB 
+connector.
 
 Also, a 100n X7R capacitor shall be placed between SGND and chassis right at the
 input connector. This capacitor will shunt radio and other interfirence signal
@@ -65,18 +67,24 @@ For input filter we choose the frequency between 300kHz and 400kHz.
                 |
                 - Ground
 
+
 Low pass filter components:
 
-* The series low pass resistor is compromised of 'Rlp' and 'Rzi' in series.
-* The shunt capacitor Clp
-  
+* The series low pass resistor is compromised of ``Rlp`` and ``Rzi`` in series.
+* The shunt capacitor ``Clp`` with capacitor ``Czi`` at the point where ``Rlp`` 
+  and ``Rzi`` meet.
+ 
+Using the 2nd order CR low-pass filter calculator at URL: 
+*http://sim.okawa-denshi.jp/en/CRCRtool.php* we arrive at:
+
 .. math::
 
-    flp=1/(2*pi*Clp*(Rlp+Rzi))
-    
-    flp=1/(2*pi*2.2e-9*(100+100))
-    
-    flp=361kHz
+    R1 = 100 Ohm, R2 = 100 Ohm
+	C1 = 220pF,   C2 = 2.2nF
+	
+	fp1 = 352kHz
+	fp2 = 14MHz
+	
 
 The ground loop breaker resistor
 ````````````````````````````````
@@ -109,22 +117,23 @@ The output circuit is the following::
     Vout   +-------+  |   Vspeaker
                       |
           Rd          |
-                    ----- Cz2 = 100nF
+                    ----- Czo = 100nF
                     -----
                       |
                       |
-                     +-+  Rz1 = 10 Ohm
+                     +-+  Rzo = 10 Ohm
                      | |
                      | |
                      +-+
                       |
                      +++
 
-The output coil Ld provides high frequency isolation of output load from output
-stage in LM3886. The inductance value should be between 2.2uH up to 3.3uH. 
-Output shunt resistor should be between 2.2 Ohm and 4.7 Ohm. See 
-*Douglas Self - Audio Power Amplifier Design Handbook, 3rd Ed., Output networks, chapter 7* 
-for effect on power amplifier transfer function.
+
+The output coil ``Ld`` provides high frequency isolation of output load from 
+output stage of LM1875. The inductance value should be between 2.2uH up to 
+3.3uH. Output shunt resistor should be between 2.2 Ohm and 4.7 Ohm. See 
+*Douglas Self - Audio Power Amplifier Design Handbook, 3rd Ed., Output networks, 
+chapter 7* for effect on power amplifier transfer function.
 
 Paralleling multiple modules
 ----------------------------
@@ -161,8 +170,6 @@ Power dissipation
 
 **NOTE:**
 
-* Try to keep power dissipation to around 40W per IC package. (from PDF
-  document *AN-1192 Overture Series High Power Solutions*) for LM3886.
 * Maximum power dissipation should be around 25W per IC package for LM1875.
 
 Fortunately, with music signals the power dissipation should be lower. 
@@ -177,7 +184,7 @@ This means that effective output power is around ``50W/4 = 12.5W``.
 
 Maximum voltages at:
 
-* Maximum dissipation for LM1875 is ``Pdiss=30W``.
+* Instantenious dissipation for LM1875 is ``Pdiss=30W``.
 * Load phase is ``LoadPHI=60degrees``.
 * Including quiescent current dissipation.
 * Case temperature is 60C degrees.
@@ -277,7 +284,7 @@ The power supply section is using single banks of 10mF capacitors with 0.22Ohm
 resistor in series between bridge rectifier and smoothing capacitors.
 
 Gain value
-----------
+==========
 
 Using inverted topology since we want to reduce common mode distortion in the
 input stage.
@@ -454,7 +461,7 @@ frequency. Also, the signal is applied to inverting input. See Bob Cordell
 super gain clone ``.ppt``.
 
 Frequency compensation
-----------------------
+======================
 
 The LM1875 is modeled in the following way:
 
@@ -639,274 +646,3 @@ powers of 20W-30W @ 8 Ohm.
 * On case chassis there should be a safety ground screw just near at the input
   220V socket.
 
-
-Amplifier controller
-====================
-
-Amplifier controller will control and monitor two amplifiers. It has the
-following components:
-
-* Power supply undervoltage protection
-* Power supply overvoltage protection
-* Power supply imbalance protection
-* Output DC offset protection
-* Output clipping protection
-* Over-temperature protection
-* Over-current protection
-
-
-Power supply undervoltage protection
-------------------------------------
-
-Power supply overvoltage protection
------------------------------------
-
-Power supply imbalance protection
----------------------------------
-
-Output DC offset protection
----------------------------
-
-Output clipping protection
---------------------------
-
-Over-temperature protection
----------------------------
-
-Over-current protection
------------------------
-
-
-Analog inputs
--------------
-
-
-.. code::
-
-              o  Vdd
-              |
-             +-+
-             | | R2
-             | |
-       R1    +-+
-      +---+   |
-    >-|   |---+------+-> Analog output (to MCU ADC)
-      +---+   |      |
-    Analog   +-+    ---
-    Input    | | R3 --- C1
-             | |     |
-             +-+     V
-              |
-              V
-
-Enviromental parametars:
-
-* Power supply: Vdd = 5V
-* Analog output impedance: Rout <= 10k
-
-Specification:
-
-* Analog input range: Ain = +/-40V
-* Analog input impedance: Rin >= 10k
-
-Equations:
- (1) Since for 0V Ain we need 2.5V Aout: R2 = R1 || R3
- (2) Since we need gain 1/16 (5V/80V) we have: 16 = R1 / (R1 || R2 || R3)
-
-This give as two equations with 3 unknowns:
-
-.. math::
-
-    (1 - Gain - 1)*G1 + G2 + G3 = 0
-    
-    Vref * G1 + Vref * G2 + (Vref - Vhigh) * G3 = 0
-
-With Gain = 16, Vreg = 2.5V and Vhigh = 5V we have:
-
-.. math::
-
-    -15G1+G2+G3=0
-    
-    2.5G1+2.5G2-2.5G3=0
-
-Start with G3 = 1/10:
-
-.. math::
-
-    -15G1+G2=-0.1
-    
-    2.5G1+2.5G2=0.25
-
-    G1=1.25e+3 => R1=80kOhm
-    
-    G3=8.75e-2 => R2=11.43kOhm
-
-
-One possibility is to have:
-
-.. math::
-
-    R1 = 110kOhm
-    
-    R2 = 10kOhm
-
-    R3 = 11kOhm
-  
-This combination has Gain = 22
-
-Monitor MCU pins
-================
-
-
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| # / Signal name       | Type          | 40 pin    | 28 pin    | Description                                       |
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 1. pa_vcc             | analog in     | RD0       |           | Measures the VCC voltage                          | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+ 
-| 2. pa_vee             | analog in     | RD1       |           | Measures the VEE voltage                          | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 3. pa_ope             | analog in     | RA6       | RA6       | Measures Output Positive Envelope (Both channels) | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 4. pa_one             | analog in     | RA7       | RA7       | Measures Output Negative Envelope (Both channels) | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 5. pa_oal             | analog in     | RA2       | RA2       | Measures Output Average Left                      |  
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 6. pa_oar             | analog in     | RA4       | RA4       | Measures Output Average Right                     | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 7. pc_ol              | analog/comp in| RA0       | RA0       | Compares Output Left impedance                    | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 8. pc_or              | analog/comp in| RA1       | RA1       | Compares Output Right impedance                   | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 9. pc_ref             | analog/comp in| RA3       | RA3       | Comparator reference voltage                      | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 10. pc_i2c_scl        | i2c scl       | RC3       | RC3       | Sensor network SCL                                | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 11. pc_i2c_sda        | i2c sda       | RC4       | RC4       | Sensor network SDA                                | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 12. pc_uart_rx        | uart rx       | RC7       | RC7       | Service terminal RX                               | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 13. pc_uart_tx        | uart tx       | RC6       | RC6       | Service terminal TX                               | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 14. po_comp_en        | dig out       | RA5       | RA5       | Enable comparator current sources                 | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 15. po_ctrl_power     | dig out       | RB1       | RB1       | Control power relay                               | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 16. po_ctrl_pbypass   | dig out       | RB2       | RB2       | Control power bypass relay                        | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 17. po_ctrl_mute      | dig out       | RB3       | RB3       | Control mute relay                                | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 18. po_ctrl_enable    | dig out       | RB4       | RB4       | Control power amplifier enable                    | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 19. po_ind_power_a    | dig out       | RB5       | RB5       | Indicator power/status LED, pin A                 | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 20. po_ind_power_b    | dig out       | RD2       |           | Indicator power/status LED, pin B                 | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 21. po_ind_overload   | dig out       | RB6       | RB6       | Indicator overload LED                            | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+ 
-| 22. po_status         | dig out       | RB7       | RB7       | Status LED on board                               | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 23. pi_key_power      | dig in        | RB0       | RB0       | Power key                                         | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+ 
-| 24. pi_key_mute       | dig in        | RC5       | RC5       | Mute key                                          | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 25. pi_det_ac_power   | dig in        | RC0       | RC0       | AC power detection                                | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 26. pi_det_overload   | dig in        | RC1       | RC1       | Overload detection                                | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 27. pi_det_signal     | dig in        | RC2       | RC2       | Signal detection                                  | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 28. pi_cfg_power      | dig in        | RD3       |           | Configure power control mode                      | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 29. pi_cfg_ac_power   | dig in        | RD4       |           | Configure AC power detection mode                 | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 30. pi_cfg_impedance  | dig in        | RD5       |           | Configure Impedance monitoring mode               | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 31. pi_cfg_sensors    | dig in        | RD6       |           | Configure sensors mode                            | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 32.                   |               | RD7       |           |                                                   | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 33.                   |               | RE0       |           |                                                   | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 34.                   |               | RE1       |           |                                                   | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-| 35.                   |               | RE2       |           |                                                   | 
-+-----------------------+---------------+-----------+-----------+---------------------------------------------------+
-
-
-Hardware configurations
-=======================
-
-Power control mode
-
-* 0 - Disabled, always on
-* 1 - Enabled, wait for Power on event
-
-AC power detection mode: 
-
-* 0 - Disabled, AC always present 
-* 1 - Enabled, AC detect on
-
-Impedance monitoring mode:
-
-* 0 - Disabled, always allow power on
-* 1 - Enabled, dissallow power on when impedance is out of minimal limit
-
-Sensors mode:
-
-* 0 - Disabled, all temperature sensors are ignored
-* 1 - Enabled, read all temperature sensors
-    
-
-Software configurations
-=======================
-
-Power supply:
-
-* nominal value: 20V
-* minimal value: 15V
-* maximum value: 25V
-* imbalance value: 10V
-* bypass time: 500ms
-* post bypass time: 500ms
-* mode, same as HW configuration 1
-
-Clipping detector:
-
-* clipping min voltage 4: 5
-* clipping min voltage 8: 3
-* hold off: 1000ms
-* timeout to mute: 10s
-* timeout to shutdown: 20s
-* mode:
-
-  * 0 - Disabled,
-  * 1 - Enabled
-
-AC detector:
-
-* num of cycles missing: 4
-* mode, same as HW configuration 2
-
-Impedance detector:
-
-* mode, same as HW configuration 3
-
-Temperature detector:
-
-* mode 
-   
-Chassis
-=======
-
-Component height
-----------------
-
-Power supply capacitors on amplifier boards: 
-
-* 35.5mm (2.2mF)
-* 25mm (1mF)
-
-Power supply capacitors on PSU board:
-
-* 30mm (6.8mF)
- 
