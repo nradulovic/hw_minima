@@ -147,12 +147,12 @@ $EndComp
 Text Notes 8000 3950 0    50   ~ 0
 Return speaker ground at the\njunction of bypass capacitors \nnear power IC.
 $Comp
-L Device:C C?
+L Device:C Clp?
 U 1 1 5B6E6214
 P 2700 3550
-AR Path="/5B57B0FA/5B6E6214" Ref="C?"  Part="1" 
-AR Path="/5B6E6214" Ref="C6"  Part="1" 
-F 0 "C6" H 2815 3702 50  0000 L CNN
+AR Path="/5B57B0FA/5B6E6214" Ref="Clp?"  Part="1" 
+AR Path="/5B6E6214" Ref="Clp1"  Part="1" 
+F 0 "Clp1" H 2815 3702 50  0000 L CNN
 F 1 "2n2" H 2815 3611 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 2738 3400 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2095938.pdf" H 2700 3550 50  0001 C CNN
@@ -164,12 +164,12 @@ F 7 "SR211A222JAR" H 2700 3550 60  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C Czi?
 U 1 1 5B6E621F
 P 2200 3550
-AR Path="/5B57B0FA/5B6E621F" Ref="C?"  Part="1" 
-AR Path="/5B6E621F" Ref="C5"  Part="1" 
-F 0 "C5" H 2315 3702 50  0000 L CNN
+AR Path="/5B57B0FA/5B6E621F" Ref="Czi?"  Part="1" 
+AR Path="/5B6E621F" Ref="Czi1"  Part="1" 
+F 0 "Czi1" H 2315 3702 50  0000 L CNN
 F 1 "220p" H 2315 3611 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 2238 3400 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2095938.pdf" H 2200 3550 50  0001 C CNN
@@ -181,12 +181,12 @@ F 7 "AVX:SR211A221JAR" H 2200 3550 60  0001 C CNN "Manufacturer"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R Rzi?
 U 1 1 5B6E622C
 P 1950 3000
-AR Path="/5B57B0FA/5B6E622C" Ref="R?"  Part="1" 
-AR Path="/5B6E622C" Ref="R4"  Part="1" 
-F 0 "R4" V 1531 3000 50  0000 C CNN
+AR Path="/5B57B0FA/5B6E622C" Ref="Rzi?"  Part="1" 
+AR Path="/5B6E622C" Ref="Rzi1"  Part="1" 
+F 0 "Rzi1" V 1531 3000 50  0000 C CNN
 F 1 "100" V 1622 3000 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1880 3000 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 1950 3000 50  0001 C CNN
@@ -198,12 +198,12 @@ F 7 "0.25W" V 1827 3000 60  0000 C CNN "Power"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R Rlp?
 U 1 1 5B6E6237
 P 2450 3000
-AR Path="/5B57B0FA/5B6E6237" Ref="R?"  Part="1" 
-AR Path="/5B6E6237" Ref="R5"  Part="1" 
-F 0 "R5" V 2031 3000 50  0000 C CNN
+AR Path="/5B57B0FA/5B6E6237" Ref="Rlp?"  Part="1" 
+AR Path="/5B6E6237" Ref="Rlp1"  Part="1" 
+F 0 "Rlp1" V 2031 3000 50  0000 C CNN
 F 1 "100" V 2122 3000 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2380 3000 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 2450 3000 50  0001 C CNN
@@ -219,8 +219,8 @@ L Device:R R?
 U 1 1 5B6E6242
 P 3200 4450
 AR Path="/5B57B0FA/5B6E6242" Ref="R?"  Part="1" 
-AR Path="/5B6E6242" Ref="R12"  Part="1" 
-F 0 "R12" H 3130 4298 50  0000 R CNN
+AR Path="/5B6E6242" Ref="R8"  Part="1" 
+F 0 "R8" H 3130 4298 50  0000 R CNN
 F 1 "10" H 3130 4389 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3130 4450 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 3200 4450 50  0001 C CNN
@@ -253,8 +253,8 @@ L Device:R R?
 U 1 1 5B6E625B
 P 3200 3550
 AR Path="/5B57B0FA/5B6E625B" Ref="R?"  Part="1" 
-AR Path="/5B6E625B" Ref="R8"  Part="1" 
-F 0 "R8" H 3270 3702 50  0000 L CNN
+AR Path="/5B6E625B" Ref="R5"  Part="1" 
+F 0 "R5" H 3270 3702 50  0000 L CNN
 F 1 "100k" H 3270 3611 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3130 3550 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 3200 3550 50  0001 C CNN
@@ -290,7 +290,7 @@ F 3 "" H 3200 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 1700 4600 0    50   ~ 0
-Put R10 and C13 right next to\ninput connector. The return\nground should be at the connector\nside.
+Put Rzi and Czi right next to\ninput connector. The return\nground should be at the\nconnector side.
 Text Label 1350 3100 0    50   ~ 0
 sgnd
 Text Label 1350 3000 0    50   ~ 0
@@ -328,8 +328,8 @@ L Device:C C?
 U 1 1 5B6EB783
 P 10300 5350
 AR Path="/5ABAAF3C/5B6EB783" Ref="C?"  Part="1" 
-AR Path="/5B6EB783" Ref="C11"  Part="1" 
-F 0 "C11" H 10415 5502 50  0000 L CNN
+AR Path="/5B6EB783" Ref="C8"  Part="1" 
+F 0 "C8" H 10415 5502 50  0000 L CNN
 F 1 "100n" H 10415 5411 50  0000 L CNN
 F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 10338 5200 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1784425.pdf" H 10300 5350 50  0001 C CNN
@@ -345,8 +345,8 @@ L Device:CP1 C?
 U 1 1 5B6EB78D
 P 9800 5350
 AR Path="/5ABAAF3C/5B6EB78D" Ref="C?"  Part="1" 
-AR Path="/5B6EB78D" Ref="C10"  Part="1" 
-F 0 "C10" H 9915 5449 50  0000 L CNN
+AR Path="/5B6EB78D" Ref="C7"  Part="1" 
+F 0 "C7" H 9915 5449 50  0000 L CNN
 F 1 "100u" H 9915 5358 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 9800 5350 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2321304.pdf" H 9800 5350 50  0001 C CNN
@@ -374,8 +374,8 @@ L Device:C C?
 U 1 1 5B6EB7B5
 P 10300 5850
 AR Path="/5ABAAF3C/5B6EB7B5" Ref="C?"  Part="1" 
-AR Path="/5B6EB7B5" Ref="C14"  Part="1" 
-F 0 "C14" H 10415 6002 50  0000 L CNN
+AR Path="/5B6EB7B5" Ref="C11"  Part="1" 
+F 0 "C11" H 10415 6002 50  0000 L CNN
 F 1 "100n" H 10415 5911 50  0000 L CNN
 F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 10338 5700 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1784425.pdf" H 10300 5850 50  0001 C CNN
@@ -391,8 +391,8 @@ L Device:CP1 C?
 U 1 1 5B6EB7BF
 P 9800 5850
 AR Path="/5ABAAF3C/5B6EB7BF" Ref="C?"  Part="1" 
-AR Path="/5B6EB7BF" Ref="C13"  Part="1" 
-F 0 "C13" H 9915 5949 50  0000 L CNN
+AR Path="/5B6EB7BF" Ref="C10"  Part="1" 
+F 0 "C10" H 9915 5949 50  0000 L CNN
 F 1 "100u" H 9915 5858 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 9800 5850 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2321304.pdf" H 9800 5850 50  0001 C CNN
@@ -407,8 +407,8 @@ L Device:CP1 C?
 U 1 1 5B6EC2C2
 P 9300 5350
 AR Path="/5ABAAF67/5B6EC2C2" Ref="C?"  Part="1" 
-AR Path="/5B6EC2C2" Ref="C9"  Part="1" 
-F 0 "C9" H 9415 5449 50  0000 L CNN
+AR Path="/5B6EC2C2" Ref="C6"  Part="1" 
+F 0 "C6" H 9415 5449 50  0000 L CNN
 F 1 "2m2" H 9415 5358 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 9300 5350 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2321616.pdf" H 9300 5350 50  0001 C CNN
@@ -511,8 +511,8 @@ L Device:CP1 C?
 U 1 1 5B6EC310
 P 9300 5850
 AR Path="/5ABAAF67/5B6EC310" Ref="C?"  Part="1" 
-AR Path="/5B6EC310" Ref="C12"  Part="1" 
-F 0 "C12" H 9415 5949 50  0000 L CNN
+AR Path="/5B6EC310" Ref="C9"  Part="1" 
+F 0 "C9" H 9415 5949 50  0000 L CNN
 F 1 "2m2" H 9415 5858 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 9300 5850 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2321616.pdf" H 9300 5850 50  0001 C CNN
@@ -629,12 +629,12 @@ F 3 "" H 6700 2100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R Rd?
 U 1 1 5B6FAE68
 P 6950 3600
-AR Path="/5ABAAF3C/5B6FAE68" Ref="R?"  Part="1" 
-AR Path="/5B6FAE68" Ref="R9"  Part="1" 
-F 0 "R9" V 6561 3600 50  0000 C CNN
+AR Path="/5ABAAF3C/5B6FAE68" Ref="Rd?"  Part="1" 
+AR Path="/5B6FAE68" Ref="Rd1"  Part="1" 
+F 0 "Rd1" V 6561 3600 50  0000 C CNN
 F 1 "4.7" V 6652 3600 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P15.24mm_Horizontal" V 6880 3600 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2099800.pdf" H 6950 3600 50  0001 C CNN
@@ -646,12 +646,12 @@ F 7 "MF" V 6834 3600 50  0000 C CNN "Type"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:L L?
+L Device:L Ld?
 U 1 1 5B6FAE6F
 P 6950 3900
-AR Path="/5ABAAF3C/5B6FAE6F" Ref="L?"  Part="1" 
-AR Path="/5B6FAE6F" Ref="L1"  Part="1" 
-F 0 "L1" V 7140 3900 50  0000 C CNN
+AR Path="/5ABAAF3C/5B6FAE6F" Ref="Ld?"  Part="1" 
+AR Path="/5B6FAE6F" Ref="Ld1"  Part="1" 
+F 0 "Ld1" V 7140 3900 50  0000 C CNN
 F 1 "2u" V 7049 3900 50  0000 C CNN
 F 2 "Inductor_THT:L_Axial_L12.0mm_D5.0mm_P15.24mm_Horizontal_Fastron_MISC" H 6950 3900 50  0001 C CNN
 F 3 "" H 6950 3900 50  0001 C CNN
@@ -662,12 +662,12 @@ Connection ~ 6700 3600
 Wire Wire Line
 	6700 3900 6800 3900
 $Comp
-L Device:R R?
+L Device:R Rzo?
 U 1 1 5B6FAE7C
 P 7200 2450
-AR Path="/5ABAAF3C/5B6FAE7C" Ref="R?"  Part="1" 
-AR Path="/5B6FAE7C" Ref="R3"  Part="1" 
-F 0 "R3" H 7270 2587 50  0000 L CNN
+AR Path="/5ABAAF3C/5B6FAE7C" Ref="Rzo?"  Part="1" 
+AR Path="/5B6FAE7C" Ref="Rzo1"  Part="1" 
+F 0 "Rzo1" H 7270 2587 50  0000 L CNN
 F 1 "10" H 7270 2496 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P15.24mm_Horizontal" V 7130 2450 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2099800.pdf" H 7200 2450 50  0001 C CNN
@@ -719,8 +719,8 @@ L Device:CP1 C?
 U 1 1 5B6FAE98
 P 4250 3000
 AR Path="/5ABAAF3C/5B6FAE98" Ref="C?"  Part="1" 
-AR Path="/5B6FAE98" Ref="C4"  Part="1" 
-F 0 "C4" V 3892 3000 50  0000 C CNN
+AR Path="/5B6FAE98" Ref="C3"  Part="1" 
+F 0 "C3" V 3892 3000 50  0000 C CNN
 F 1 "470u" V 3983 3000 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 4250 3000 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2321304.pdf" H 4250 3000 50  0001 C CNN
@@ -752,8 +752,8 @@ L Device:R R?
 U 1 1 5B6FAEAE
 P 5150 4800
 AR Path="/5ABAAF3C/5B6FAEAE" Ref="R?"  Part="1" 
-AR Path="/5B6FAEAE" Ref="R13"  Part="1" 
-F 0 "R13" V 5265 4800 50  0000 C CNN
+AR Path="/5B6FAEAE" Ref="R9"  Part="1" 
+F 0 "R9" V 5265 4800 50  0000 C CNN
 F 1 "1k6" V 5356 4800 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5080 4800 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 5150 4800 50  0001 C CNN
@@ -782,8 +782,8 @@ L Device:C C?
 U 1 1 5B6FAEC1
 P 5550 4800
 AR Path="/5ABAAF3C/5B6FAEC1" Ref="C?"  Part="1" 
-AR Path="/5B6FAEC1" Ref="C8"  Part="1" 
-F 0 "C8" V 5086 4800 50  0000 C CNN
+AR Path="/5B6FAEC1" Ref="C5"  Part="1" 
+F 0 "C5" V 5086 4800 50  0000 C CNN
 F 1 "15p" V 5177 4800 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5588 4650 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2095938.pdf" H 5550 4800 50  0001 C CNN
@@ -820,8 +820,8 @@ L Device:CP1 C?
 U 1 1 5B6FAED8
 P 4250 4200
 AR Path="/5ABAAF3C/5B6FAED8" Ref="C?"  Part="1" 
-AR Path="/5B6FAED8" Ref="C7"  Part="1" 
-F 0 "C7" V 3892 4200 50  0000 C CNN
+AR Path="/5B6FAED8" Ref="C4"  Part="1" 
+F 0 "C4" V 3892 4200 50  0000 C CNN
 F 1 "470u" V 3983 4200 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 4250 4200 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2321304.pdf" H 4250 4200 50  0001 C CNN
@@ -840,8 +840,8 @@ L Device:R R?
 U 1 1 5B6FAEE5
 P 4650 4200
 AR Path="/5ABAAF3C/5B6FAEE5" Ref="R?"  Part="1" 
-AR Path="/5B6FAEE5" Ref="R10"  Part="1" 
-F 0 "R10" V 4231 4200 50  0000 C CNN
+AR Path="/5B6FAEE5" Ref="R6"  Part="1" 
+F 0 "R6" V 4231 4200 50  0000 C CNN
 F 1 "499" V 4322 4200 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4580 4200 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 4650 4200 50  0001 C CNN
@@ -857,8 +857,8 @@ L Device:R R?
 U 1 1 5B6FAEF0
 P 5150 3000
 AR Path="/5ABAAF3C/5B6FAEF0" Ref="R?"  Part="1" 
-AR Path="/5B6FAEF0" Ref="R7"  Part="1" 
-F 0 "R7" V 4731 3000 50  0000 C CNN
+AR Path="/5B6FAEF0" Ref="R4"  Part="1" 
+F 0 "R4" V 4731 3000 50  0000 C CNN
 F 1 "7k5" V 4822 3000 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5080 3000 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 5150 3000 50  0001 C CNN
@@ -874,8 +874,8 @@ L Device:R R?
 U 1 1 5B6FAEFB
 P 5150 4200
 AR Path="/5ABAAF3C/5B6FAEFB" Ref="R?"  Part="1" 
-AR Path="/5B6FAEFB" Ref="R11"  Part="1" 
-F 0 "R11" V 5265 4200 50  0000 C CNN
+AR Path="/5B6FAEFB" Ref="R7"  Part="1" 
+F 0 "R7" V 5265 4200 50  0000 C CNN
 F 1 "7k5" V 5356 4200 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5080 4200 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 5150 4200 50  0001 C CNN
@@ -958,8 +958,8 @@ L Device:R R?
 U 1 1 5B6FAF30
 P 4650 3000
 AR Path="/5ABAAF3C/5B6FAF30" Ref="R?"  Part="1" 
-AR Path="/5B6FAF30" Ref="R6"  Part="1" 
-F 0 "R6" V 4231 3000 50  0000 C CNN
+AR Path="/5B6FAF30" Ref="R3"  Part="1" 
+F 0 "R3" V 4231 3000 50  0000 C CNN
 F 1 "499" V 4322 3000 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4580 3000 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1723855.pdf" H 4650 3000 50  0001 C CNN
@@ -1052,12 +1052,12 @@ Wire Wire Line
 Wire Wire Line
 	7200 2300 7200 2150
 $Comp
-L Device:C C?
+L Device:C Czo?
 U 1 1 5B6FAF6B
 P 7200 2850
-AR Path="/5ABAAF3C/5B6FAF6B" Ref="C?"  Part="1" 
-AR Path="/5B6FAF6B" Ref="C3"  Part="1" 
-F 0 "C3" H 7315 3002 50  0000 L CNN
+AR Path="/5ABAAF3C/5B6FAF6B" Ref="Czo?"  Part="1" 
+AR Path="/5B6FAF6B" Ref="Czo1"  Part="1" 
+F 0 "Czo1" H 7315 3002 50  0000 L CNN
 F 1 "100n" H 7315 2911 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 7238 2700 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2095938.pdf" H 7200 2850 50  0001 C CNN
@@ -1071,7 +1071,7 @@ $EndComp
 Wire Wire Line
 	7200 2600 7200 2700
 Text Notes 7650 2550 0    50   ~ 0
-Put R3 and C3 right next to output \nconnector. Also, the return ground \nshould be at the connector side.
+Put Rzo and Czo right next to output \nconnector. Also, the return ground \nshould be at the connector side.
 Wire Wire Line
 	3200 3000 4100 3000
 Connection ~ 3200 3000
