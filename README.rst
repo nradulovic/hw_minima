@@ -6,11 +6,20 @@
 Introduction
 ============
 
-This document shall describe procedures to build audio power amplifier using
-LM1875 integrated circuit.
+This document shall describe rationales used to design and build audio 
+power amplifier using LM1875 integrated circuit.
 
 Architecture
 ============
+
+The amplifier architecture consists of the following sections:
+
+* Input circuit
+* Power amplifier
+* Power supply
+
+**Input circuit** and **Power amplifier** sections are located on single PCB
+while the **Power supply** is located on separate PCB board.
 
 Input circuit
 -------------
