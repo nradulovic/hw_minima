@@ -455,16 +455,16 @@ $Comp
 L Device:R R3
 U 1 1 5B8A491D
 P 2600 2250
-F 0 "R3" H 2670 2387 50  0000 L CNN
-F 1 "1" H 2670 2296 50  0000 L CNN
+F 0 "R3" H 2530 2113 50  0000 R CNN
+F 1 "1" H 2530 2204 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2530 2250 50  0001 C CNN
 F 3 "https://export.farnell.com/c/passive-components/resistors-fixed-value/through-hole-resistors?product-range=sfr125-series" H 2600 2250 50  0001 C CNN
 F 4 "Vishay:SFR2500001008JA500" H 2600 2250 50  0001 C CNN "Manufacturer"
 F 5 "Farnell:9476539" H 2600 2250 50  0001 C CNN "Vendor"
-F 6 "0.4W" H 2670 2205 50  0000 L CNN "Power"
-F 7 "MF" H 2670 2114 50  0000 L CNN "Type"
+F 6 "0.4W" H 2530 2295 50  0000 R CNN "Power"
+F 7 "MF" H 2530 2386 50  0000 R CNN "Type"
 	1    2600 2250
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R4
@@ -485,16 +485,16 @@ $Comp
 L Device:R R5
 U 1 1 5B8A4C40
 P 4600 2750
-F 0 "R5" H 4670 2887 50  0000 L CNN
-F 1 "10k" H 4670 2796 50  0000 L CNN
+F 0 "R5" H 4530 2613 50  0000 R CNN
+F 1 "10k" H 4530 2704 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4530 2750 50  0001 C CNN
 F 3 "https://export.farnell.com/c/passive-components/resistors-fixed-value/through-hole-resistors?product-range=sfr125-series" H 4600 2750 50  0001 C CNN
 F 4 "Vishay:SFR2500001002JA500" H 4600 2750 50  0001 C CNN "Manufacturer"
 F 5 "Farnell:9476539" H 4600 2750 50  0001 C CNN "Vendor"
-F 6 "0.4W" H 4670 2705 50  0000 L CNN "Power"
-F 7 "MF" H 4670 2614 50  0000 L CNN "Type"
+F 6 "0.4W" H 4530 2795 50  0000 R CNN "Power"
+F 7 "MF" H 4530 2886 50  0000 R CNN "Type"
 	1    4600 2750
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Diode_Bridge:GBU4A D1
@@ -700,10 +700,10 @@ F 3 "~" H 9200 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO1
+L Graphic:Logo_Open_Hardware_Small LOGO1
 U 1 1 5B8B640D
 P 10150 4000
-F 0 "#LOGO1" H 10150 4275 50  0001 C CNN
+F 0 "LOGO1" H 10150 4275 50  0001 C CNN
 F 1 "Kicad_Logo" H 10150 4294 50  0000 C CNN
 F 2 "Symbol:KiCad-Logo_5mm_Copper" H 10150 4000 50  0001 C CNN
 F 3 "~" H 10150 4000 50  0001 C CNN
@@ -711,14 +711,40 @@ F 3 "~" H 10150 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO2
+L Graphic:Logo_Open_Hardware_Small LOGO2
 U 1 1 5B8B650F
 P 10150 4500
-F 0 "#LOGO2" H 10150 4775 50  0001 C CNN
+F 0 "LOGO2" H 10150 4775 50  0001 C CNN
 F 1 "Kicad_Logo" H 10150 4794 50  0000 C CNN
 F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 10150 4500 50  0001 C CNN
 F 3 "~" H 10150 4500 50  0001 C CNN
 	1    10150 4500
 	1    0    0    -1  
+$EndComp
+Text Label 2150 1100 0    50   ~ 0
+acs_p
+Text Label 2150 2900 0    50   ~ 0
+acs_n
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5C4C46CF
+P 2600 1100
+F 0 "#FLG?" H 2600 1175 50  0001 C CNN
+F 1 "PWR_FLAG" H 2600 1274 50  0000 C CNN
+F 2 "" H 2600 1100 50  0001 C CNN
+F 3 "~" H 2600 1100 50  0001 C CNN
+	1    2600 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5C4C470E
+P 2600 2900
+F 0 "#FLG?" H 2600 2975 50  0001 C CNN
+F 1 "PWR_FLAG" H 2600 3074 50  0000 C CNN
+F 2 "" H 2600 2900 50  0001 C CNN
+F 3 "~" H 2600 2900 50  0001 C CNN
+	1    2600 2900
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
