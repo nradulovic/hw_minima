@@ -227,76 +227,6 @@ stored in power supply capacitors and how much will the transformer voltages
 sag under these conditions and that music signal has much lower effective power
 comparing to instantaneous power.
 
-Power supply
-============
-
-Parallel chip solution
-----------------------
-
-Transformer specification for LM1875 amplifier is the following:
-
-* ``S=200VA``, power rating.
-* ``Usn1=20Veff``, first secondary nominal voltage.
-* ``Usn2=20Veff``, second secondary nominal voltage.
-* ``k=5%``, regulation.
-
-Secondary internal resistance is:
-
-.. math::
-
-    Usu=Usn1*(1+(k/100))
-    
-    Isn=S/(Usn1+Usn2)
-    
-    Ri=(Usn1-Usu)/Isn
-    
-Using values from above we get:
-
-.. math:: 
-    
-    Usu=20*(1+(5/100))=21Veff
-    
-    Isn=5Aeff
-
-    Ri=200mOhm
-    
-The power supply section is using two banks of 10mF capacitors with 0.22Ohm
-resistor in series between them. This arrangement gives time constant about
-100ms when going from unloaded to full load state.
-
-Single chip solution
---------------------
-
-Transformer specification for LM1875 amplifier is the following:
-
-* ``S=80VA``, power rating.
-* ``Usn1=18Veff``, first secondary nominal voltage.
-* ``Usn2=18Veff``, second secondary nominal voltage.
-* ``k=10%``, regulation.
-
-Secondary internal resistance is:
-
-.. math::
-
-    Usu=Usn1*(1+(k/100))
-    
-    Isn=S/(Usn1+Usn2)
-    
-    Ri=(Usn1-Usu)/Isn
-    
-Using values from above we get:
-
-.. math:: 
-    
-    Usu=18*(1+(10/100))=19.8Veff
-    
-    Isn=2.2Aeff
-
-    Ri=810mOhm
-    
-The power supply section is using single banks of 10mF capacitors with 0.22Ohm
-resistor in series between bridge rectifier and smoothing capacitors.
-
 Gain value
 ==========
 
@@ -382,8 +312,8 @@ Chosen values when using parallel E48 series (two resistor):
 * Rg = 1kOhm
 
 
-Gain errors
------------
+Gain errors when using parallel solution
+----------------------------------------
 
 Nominal absolute gain is:
 
@@ -495,7 +425,7 @@ The LM1875 is modeled in the following way:
 +-----------+-----------+-----------+-----------+-----------+-----------+-----------+
 
 Lead compensation
-`````````````````
+-----------------
 
 Equivalent feedback network with lead compensation circuit::
 
@@ -659,4 +589,75 @@ powers of 20W-30W @ 8 Ohm.
 
 * On case chassis there should be a safety ground screw just near at the input
   220V socket.
+
+
+Parallel chip solution
+----------------------
+
+Transformer specification for LM1875 amplifier is the following:
+
+* ``S=200VA``, power rating.
+* ``Usn1=20Veff``, first secondary nominal voltage.
+* ``Usn2=20Veff``, second secondary nominal voltage.
+* ``k=5%``, regulation.
+
+Secondary internal resistance is:
+
+.. math::
+
+    Usu=Usn1*(1+(k/100))
+    
+    Isn=S/(Usn1+Usn2)
+    
+    Ri=(Usn1-Usu)/Isn
+    
+Using values from above we get:
+
+.. math:: 
+    
+    Usu=20*(1+(5/100))=21Veff
+    
+    Isn=5Aeff
+
+    Ri=200mOhm
+    
+The power supply section is using two banks of 10mF capacitors with 0.22Ohm
+resistor in series between them. This arrangement gives time constant about
+100ms when going from unloaded to full load state.
+
+Single chip solution
+--------------------
+
+Transformer specification for LM1875 amplifier is the following:
+
+* ``S=80VA``, power rating.
+* ``Usn1=18Veff``, first secondary nominal voltage.
+* ``Usn2=18Veff``, second secondary nominal voltage.
+* ``k=10%``, regulation.
+
+Secondary internal resistance is:
+
+.. math::
+
+    Usu=Usn1*(1+(k/100))
+    
+    Isn=S/(Usn1+Usn2)
+    
+    Ri=(Usn1-Usu)/Isn
+    
+Using values from above we get:
+
+.. math:: 
+    
+    Usu=18*(1+(10/100))=19.8Veff
+    
+    Isn=2.2Aeff
+
+    Ri=810mOhm
+    
+The power supply section is using single banks of 10mF capacitors with 0.22Ohm
+resistor in series between bridge rectifier and smoothing capacitors.
+
+
+
 
