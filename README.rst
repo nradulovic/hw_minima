@@ -27,7 +27,7 @@ while the **Power supply** is located on separate PCB board.
 
 
 Input circuit
--------------
+============
 
 The input circuit contains:
 
@@ -36,7 +36,7 @@ The input circuit contains:
 * The ground loop breaker resistor
 
 Input EMI suppression
-`````````````````````
+---------------------
 
 To protect the input from EMI we will use the following Zobel network:
 
@@ -67,7 +67,7 @@ input connector. This capacitor will shunt radio and other interfirence signal
 into the Chassis Ground potential.
 
 Input low pass filter
-`````````````````````
+---------------------
 
 For input filter we choose the frequency between 300kHz and 400kHz.
 
@@ -101,7 +101,7 @@ Using the 2nd order CR low-pass filter calculator at URL:
 	
 
 The ground loop breaker resistor
-````````````````````````````````
+--------------------------------
 
 A ground loop breaker resistor is located between SGND and GNDPWR grounds. The
 value of this resistor should be around 10 ohms.
@@ -228,7 +228,7 @@ sag under these conditions and that music signal has much lower effective power
 comparing to instantaneous power.
 
 Gain value
-==========
+----------
 
 Using inverted topology since we want to reduce common mode distortion in the
 input stage.
@@ -313,7 +313,7 @@ Chosen values when using parallel E48 series (two resistor):
 
 
 Gain errors when using parallel solution
-----------------------------------------
+````````````````````````````````````````
 
 Nominal absolute gain is:
 
@@ -405,7 +405,7 @@ frequency. Also, the signal is applied to inverting input. See Bob Cordell
 super gain clone ``.ppt``.
 
 Frequency compensation
-======================
+----------------------
 
 The LM1875 is modeled in the following way:
 
@@ -425,7 +425,7 @@ The LM1875 is modeled in the following way:
 +-----------+-----------+-----------+-----------+-----------+-----------+-----------+
 
 Lead compensation
------------------
+`````````````````
 
 Equivalent feedback network with lead compensation circuit::
 
@@ -500,7 +500,7 @@ Outcome:
   bandwidth should be minimal.
 
 Input pin capacitance compensation
-----------------------------------
+``````````````````````````````````
 
 Input pins have the following parasitic capacitances associated:
 
