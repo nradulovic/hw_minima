@@ -21,6 +21,11 @@ The amplifier architecture consists of the following sections:
 **Input circuit** and **Power amplifier** sections are located on single PCB
 while the **Power supply** is located on separate PCB board.
 
+.. image:: images/pcb_from_top.png
+
+.. image:: images/pcb_render_corner.png
+
+
 Input circuit
 -------------
 
@@ -565,7 +570,7 @@ Outcome:
   bandwidth should be minimal.
 
 Input pin capacitance compensation
-``````````````````````````````````
+----------------------------------
 
 Input pins have the following parasitic capacitances associated:
 
