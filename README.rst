@@ -41,26 +41,27 @@ Input EMI suppression
 To protect the input from EMI we will use the following Zobel network:
 
 .. code::
-
-      + Positive input or negative input
-      |
-     +-+  Rzi
-     | |
-     | |
-     +-+
-      |
-      +----> Toward amplifier input (LP filter)
-      |
-    ----- Czi
-    -----
-      |
-      - Ground
+          o Positive input or negative input
+          |
+          |
+        ----- Czi
+        -----
+          |
+          |
+         +-+  Rzi
+         | |
+         | |
+         +-+
+          |
+         === Ground
 
 
 For most input cables characteristic impedance falls in range between
-50 and 100ohm impedance. The resistor Rzi is ``Rzi=100ohm`` and the capacitor 
-Czi is ``Czi=220pF``. This network should be placed right at the input PCB 
-connector.
+50 and 100ohm impedance and we are using the 75ohm as the middle value. The
+resistor Rzi is ``Rzi=75ohm`` and the capacitor Czi is ``Czi=220pF``.
+This network should be placed right at the input connector, not on the
+main amplifier PCB.
+
 
 Also, a 100n X7R capacitor shall be placed between SGND and chassis right at the
 input connector. This capacitor will shunt radio and other interfirence signal
@@ -73,32 +74,30 @@ For input filter we choose the frequency between 300kHz and 400kHz.
 
 .. code::
 
-       +---+ Rlp
-    >--+   +----+-------> Toward Amplifier IC block
-       +---+    |
-              ----- Clp
-              -----
-                |
-                - Ground
+        +---+ Rlp1    +---+ Rlp2
+    0---+   +----+----+   +---+---o Toward Amplifier IC block
+        +---+    |    +---+   |
+               ----- Clp1   ----- Clp2
+               -----        -----
+                 |            |
+                === Ground   === Ground
 
 
-Low pass filter components:
-
-* The series low pass resistor is compromised of ``Rlp`` and ``Rzi`` in series.
-* The shunt capacitor ``Clp`` with capacitor ``Czi`` at the point where ``Rlp`` 
-  and ``Rzi`` meet.
- 
-Using the 2nd order CR low-pass filter calculator at URL: 
+Using the 2nd order CR low-pass filter calculator at URL:
 *http://sim.okawa-denshi.jp/en/CRCRtool.php* we arrive at:
 
 .. math::
 
-    R1 = 100 Ohm, R2 = 100 Ohm
-	C1 = 220pF,   C2 = 2.2nF
+    Rlp1 = 100 Ohm, Rlp2 = 100 Ohm
+
+    Clp1 = 220pF,   Clp2 = 2.2nF
+
+    fp1 = 352kHz
+
+    fp2 = 14MHz
 	
-	fp1 = 352kHz
-	fp2 = 14MHz
-	
+
+For more details please refer to: http://www.johnhearfield.com/RC/RC4.htm
 
 The ground loop breaker resistor
 --------------------------------
@@ -113,39 +112,40 @@ Output EMI suppression
 ----------------------
 
 Output network consists of upstream and downstream Zobel Network and of output
-coil (Ld) with parallel, damping resistor (Rd). Upstream Zobel network provides
-a low-inductance load for the output stage at very high frequencies and allows
-high-frequency currents to circulate local to the output stage. The downstream
-Zobel network provides a good resistive termination right at the speaker
-terminals at high frequencies, helping to reduce RFI ingress and damp
-resonances with, or reflections from, the speaker cables. 
-The output circuit is the following::
+coil (``Ld``) with parallel, damping resistor (``Rd``). Upstream Zobel network 
+provides a low-inductance load for the output stage at very high frequencies 
+and allows high-frequency currents to circulate local to the output stage. The 
+downstream Zobel network provides a good resistive termination right at the 
+speaker terminals at high frequencies, helping to reduce RFI ingress and damp
+resonances with, or reflections from, the speaker cables.
+The output circuit is the following:
 
-        Ld
-            xxx
-        +--x   x   x--+
-        |       xxx   |
-        |             |
-        |  +-------+  |
-      *-+--|       |--+--*
-    Vout   +-------+  |   Vspeaker
-                      |
-          Rd          |
-                    ----- Czo = 100nF
-                    -----
-                      |
-                      |
-                     +-+  Rzo = 10 Ohm
-                     | |
-                     | |
-                     +-+
-                      |
-                     +++
+.. code::
+
+    Ld
+             xxx
+        +---x   x   x---+
+        |        xxx    |
+        |               |
+        |   +-------+   |
+    o---+---|       |---+---o
+    Vout    +-------+   |   Vspeaker
+        Rd              |
+                      ----- Cz2 = 100nF
+                      -----
+                        |
+                        |
+                       +-+  Rz1 = 10 Ohm
+                       | |
+                       | |
+                       +-+
+                        |
+                       ===
 
 
 The output coil ``Ld`` provides high frequency isolation of output load from 
-output stage of LM1875. The inductance value should be between 2.2uH up to 
-3.3uH. Output shunt resistor should be between 2.2 Ohm and 4.7 Ohm. See 
+output stage of LM1875. The inductance value should be between 2uH up to 5uH. 
+Output shunt resistor should be between 2 Ohm and 5 Ohms. See 
 *Douglas Self - Audio Power Amplifier Design Handbook, 3rd Ed., Output networks, 
 chapter 7* for effect on power amplifier transfer function.
 
@@ -507,16 +507,33 @@ Input pins have the following parasitic capacitances associated:
 * Cdiff
 * Cm
 * Cstray
- 
-The LM1875/LM3886 datasheets do not specify any parameter regarding parasitic
-input capacitances. We can use a rough estimation of values based on experience
-on using other audio BJT OPAMPS, and typical values are 2pF for all 3
-parameters. In inverting configurations with `+` input grounded all three
-capacitances are tied in parallel, so the total input capacitance becomes:
+
+The LM1875 data-sheet does not specify any parameter regarding parasitic
+input capacitances. Voltage feedback OPAMPS usually have both differential and
+common-mode input impedances specified. In the absence of any information, it
+is safe to use the model given in the next figure:
+
+.. code::
+
+                   +----+ Zdiff
+    +input o---+---|    |---+---o -input
+               |   +----+   |
+               |            |
+              +-+ Zcm1     +-+ Zcm2
+              | |          | |
+              | |          | |
+              +-+          +-+
+               |            |
+              ===          ===
+
+We can use a rough estimation of values based on experience on using other 
+audio BJT OPAMPS, and typical values are around ``Cdiff=5pF``, ``Cm=4pF`` 
+and ``Cstray=3pF``. All three equivalent capacitors are tied in parallel, 
+so the total input capacitance becomes:
 
 .. math::
 
-    Cinput = Cdiff+Cm+Cstray=2pF+2pF+2pF=6pF
+    Cinput = Cdiff+Cm+Cstray=5pF+5pF+3pF=12pF
     
 To mitigate this capacitance we can add capacitance `Csi` parallel to `Rf` 
 resistor. To compensate for this the following equation is applied:
@@ -525,7 +542,7 @@ resistor. To compensate for this the following equation is applied:
 
     Rf*Csi=Rg*Cinput
     
-    Csi=Cinput*Rg/Rf=0.4pF
+    Csi=Cinput*Rg/Rf=0.8pF
     
 Since we are already using lead compensation we just add this value to existing
 `Cl` capacitor.
@@ -543,13 +560,17 @@ Although all above poles are very high in frequency they still have their
 impact on lower frequency part of transfer function and reduce a few degrees of
 phase margin at UGBW point (approx. at 500kHz). Because of these poles we can
 freely put a bit bigger `Cf` capacitor value in the feedback network. Rough
-estimation is to put additional 1-2pF.
+estimation is to put additional 1-3pF.
+
+.. math::
+
+	Cadd = 2pF
 
 For LM1875 we get:
 
 .. math::
 
-    Cf=Cl+Csi=13.3+0.4+2pF=15.7pF
+    Cf=Cl+Csi+Cadd=13.3+0.8+2pF=16.1pF
     
 Since the closest, standard values of capacitors are 15pF and 18pF, we choose
 the 15pF as the final value for `Cl` capacitor:
@@ -564,7 +585,7 @@ Power supply
 Before rectifier diodes a snubber RC circuit should be placed to decrease diode
 switching impulse. Recommended values are ``Rsn = 1 Ohm``, ``Csn = 470nF``::
 
-          + Vsupply
+          o Vsupply
           |
           |
         ----- Csn = 470nF
@@ -576,7 +597,7 @@ switching impulse. Recommended values are ``Rsn = 1 Ohm``, ``Csn = 470nF``::
          | |
          +-+
           |
-         +++ Ground
+         === Ground
 
 This snubber may be placed near the IC power supply lines, too.
 
