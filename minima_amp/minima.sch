@@ -5,11 +5,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "Minima Power Amplifier"
+Date "2019-01-31"
+Rev "1.1"
+Comp "REAL-TIME CONSULTING"
+Comment1 "Minimalistic small audio power amplifier"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -618,15 +618,15 @@ Wire Wire Line
 $Comp
 L power:GNDPWR #PWR01
 U 1 1 5B6FAE5E
-P 6700 2150
+P 6700 4500
 AR Path="/5B6FAE5E" Ref="#PWR01"  Part="1" 
 AR Path="/5ABAAF3C/5B6FAE5E" Ref="#PWR?"  Part="1" 
-F 0 "#PWR01" H 6700 1950 50  0001 C CNN
-F 1 "GNDPWR" H 6700 2020 50  0000 C CNN
-F 2 "" H 6700 2100 50  0001 C CNN
-F 3 "" H 6700 2100 50  0001 C CNN
-	1    6700 2150
-	-1   0    0    1   
+F 0 "#PWR01" H 6700 4300 50  0001 C CNN
+F 1 "GNDPWR" H 6700 4370 50  0000 C CNN
+F 2 "" H 6700 4450 50  0001 C CNN
+F 3 "" H 6700 4450 50  0001 C CNN
+	1    6700 4500
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R Rd?
@@ -648,42 +648,36 @@ $EndComp
 $Comp
 L Device:L Ld?
 U 1 1 5B6FAE6F
-P 6950 3900
+P 6950 3300
 AR Path="/5ABAAF3C/5B6FAE6F" Ref="Ld?"  Part="1" 
 AR Path="/5B6FAE6F" Ref="Ld1"  Part="1" 
-F 0 "Ld1" V 7140 3900 50  0000 C CNN
-F 1 "2u" V 7049 3900 50  0000 C CNN
-F 2 "Inductor_THT:L_Axial_L12.0mm_D5.0mm_P15.24mm_Horizontal_Fastron_MISC" H 6950 3900 50  0001 C CNN
-F 3 "" H 6950 3900 50  0001 C CNN
-	1    6950 3900
+F 0 "Ld1" V 7140 3300 50  0000 C CNN
+F 1 "2u" V 7049 3300 50  0000 C CNN
+F 2 "Inductor_THT:L_Axial_L12.0mm_D5.0mm_P15.24mm_Horizontal_Fastron_MISC" H 6950 3300 50  0001 C CNN
+F 3 "" H 6950 3300 50  0001 C CNN
+	1    6950 3300
 	0    -1   -1   0   
 $EndComp
 Connection ~ 6700 3600
-Wire Wire Line
-	6700 3900 6800 3900
 $Comp
 L Device:R Rzo?
 U 1 1 5B6FAE7C
-P 7200 2450
+P 7200 4250
 AR Path="/5ABAAF3C/5B6FAE7C" Ref="Rzo?"  Part="1" 
 AR Path="/5B6FAE7C" Ref="Rzo1"  Part="1" 
-F 0 "Rzo1" H 7270 2587 50  0000 L CNN
-F 1 "10" H 7270 2496 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P15.24mm_Horizontal" V 7130 2450 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2099800.pdf" H 7200 2450 50  0001 C CNN
-F 4 "Vishay:PR02000201009JA100" V 7200 2450 50  0001 C CNN "Manufacturer"
-F 5 "Farnell:2614526" V 7200 2450 50  0001 C CNN "Vendor"
-F 6 "2W" H 7270 2405 50  0000 L CNN "Power"
-F 7 "MF" H 7270 2314 50  0000 L CNN "Type"
-	1    7200 2450
-	1    0    0    -1  
+F 0 "Rzo1" H 7270 4113 50  0000 L CNN
+F 1 "10" H 7270 4204 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P15.24mm_Horizontal" V 7130 4250 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2099800.pdf" H 7200 4250 50  0001 C CNN
+F 4 "Vishay:PR02000201009JA100" V 7200 4250 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:2614526" V 7200 4250 50  0001 C CNN "Vendor"
+F 6 "2W" H 7270 4295 50  0000 L CNN "Power"
+F 7 "MF" H 7270 4386 50  0000 L CNN "Type"
+	1    7200 4250
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	6700 3000 6700 3600
-Wire Wire Line
-	6700 2700 6700 2600
-Wire Wire Line
-	6700 2300 6700 2150
+	6700 3300 6700 3600
 $Comp
 L power:VCC #PWR?
 U 1 1 5B6FAE87
@@ -797,19 +791,19 @@ $EndComp
 $Comp
 L Device:C C?
 U 1 1 5B6FAECC
-P 6700 2850
+P 6700 3850
 AR Path="/5ABAAF3C/5B6FAECC" Ref="C?"  Part="1" 
 AR Path="/5B6FAECC" Ref="C2"  Part="1" 
-F 0 "C2" H 6815 3002 50  0000 L CNN
-F 1 "220n" H 6815 2911 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 6738 2700 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/815363.pdf" H 6700 2850 50  0001 C CNN
-F 4 "100V" H 6815 2812 60  0000 L CNN "Voltage"
-F 5 "PET" H 6815 2706 60  0000 L CNN "Type"
-F 6 "Farnell:1890146" H 6700 2850 60  0001 C CNN "Vendor"
-F 7 "WIMA:MKS2D032201C00KSSD" H 6700 2850 60  0001 C CNN "Manufacturer"
-	1    6700 2850
-	1    0    0    -1  
+F 0 "C2" H 6815 3698 50  0000 L CNN
+F 1 "220n" H 6815 3789 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 6738 3700 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/815363.pdf" H 6700 3850 50  0001 C CNN
+F 4 "100V" H 6815 3888 60  0000 L CNN "Voltage"
+F 5 "PET" H 6815 3994 60  0000 L CNN "Type"
+F 6 "Farnell:1890146" H 6700 3850 60  0001 C CNN "Vendor"
+F 7 "WIMA:MKS2D032201C00KSSD" H 6700 3850 60  0001 C CNN "Manufacturer"
+	1    6700 3850
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	4800 4200 4900 4200
@@ -887,10 +881,6 @@ F 7 "0.6W" V 5561 4200 60  0000 C CNN "Power"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7100 3900 7200 3900
-Wire Wire Line
-	7200 3900 7200 3600
-Wire Wire Line
 	7100 3600 7200 3600
 Wire Wire Line
 	3700 1800 5800 1800
@@ -935,8 +925,6 @@ $EndComp
 Wire Wire Line
 	5700 2400 5800 2400
 Connection ~ 5800 2400
-Wire Wire Line
-	6700 3600 6700 3900
 Wire Wire Line
 	6700 3600 6800 3600
 Wire Wire Line
@@ -1020,56 +1008,52 @@ Connection ~ 7200 3600
 $Comp
 L power:GNDPWR #PWR02
 U 1 1 5B6FAF54
-P 7200 2150
+P 7200 4500
 AR Path="/5B6FAF54" Ref="#PWR02"  Part="1" 
 AR Path="/5ABAAF3C/5B6FAF54" Ref="#PWR?"  Part="1" 
-F 0 "#PWR02" H 7200 1950 50  0001 C CNN
-F 1 "GNDPWR" H 7200 2020 50  0000 C CNN
-F 2 "" H 7200 2100 50  0001 C CNN
-F 3 "" H 7200 2100 50  0001 C CNN
-	1    7200 2150
-	-1   0    0    1   
+F 0 "#PWR02" H 7200 4300 50  0001 C CNN
+F 1 "GNDPWR" H 7200 4370 50  0000 C CNN
+F 2 "" H 7200 4450 50  0001 C CNN
+F 3 "" H 7200 4450 50  0001 C CNN
+	1    7200 4500
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5B6FAF5E
-P 6700 2450
+P 6700 4250
 AR Path="/5ABAAF3C/5B6FAF5E" Ref="R?"  Part="1" 
 AR Path="/5B6FAF5E" Ref="R2"  Part="1" 
-F 0 "R2" H 6770 2587 50  0000 L CNN
-F 1 "4.7" H 6770 2496 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P15.24mm_Horizontal" V 6630 2450 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2099800.pdf" H 6700 2450 50  0001 C CNN
-F 4 "Vishay:PR02000204708JA100" V 6700 2450 50  0001 C CNN "Manufacturer"
-F 5 "Farnell:2614544" V 6700 2450 50  0001 C CNN "Vendor"
-F 6 "2W" H 6770 2405 50  0000 L CNN "Power"
-F 7 "MF" H 6770 2314 50  0000 L CNN "Type"
-	1    6700 2450
-	1    0    0    -1  
+F 0 "R2" H 6770 4113 50  0000 L CNN
+F 1 "4.7" H 6770 4204 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P15.24mm_Horizontal" V 6630 4250 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2099800.pdf" H 6700 4250 50  0001 C CNN
+F 4 "Vishay:PR02000204708JA100" V 6700 4250 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:2614544" V 6700 4250 50  0001 C CNN "Vendor"
+F 6 "2W" H 6770 4295 50  0000 L CNN "Power"
+F 7 "MF" H 6770 4386 50  0000 L CNN "Type"
+	1    6700 4250
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	7200 3000 7200 3600
-Wire Wire Line
-	7200 2300 7200 2150
+	7200 3300 7200 3600
 $Comp
 L Device:C Czo?
 U 1 1 5B6FAF6B
-P 7200 2850
+P 7200 3850
 AR Path="/5ABAAF3C/5B6FAF6B" Ref="Czo?"  Part="1" 
 AR Path="/5B6FAF6B" Ref="Czo1"  Part="1" 
-F 0 "Czo1" H 7315 3002 50  0000 L CNN
-F 1 "100n" H 7315 2911 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 7238 2700 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2095938.pdf" H 7200 2850 50  0001 C CNN
-F 4 "100V" H 7315 2812 60  0000 L CNN "Voltage"
-F 5 "X7R" H 7315 2706 60  0000 L CNN "Type"
-F 6 "Farnell:1100408" H 7200 2850 60  0001 C CNN "Vendor"
-F 7 "AVX:SR211C104KAR" H 7200 2850 60  0001 C CNN "Manufacturer"
-	1    7200 2850
-	1    0    0    -1  
+F 0 "Czo1" H 7315 3698 50  0000 L CNN
+F 1 "100n" H 7315 3789 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.1mm_W3.2mm_P5.00mm" H 7238 3700 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2095938.pdf" H 7200 3850 50  0001 C CNN
+F 4 "100V" H 7315 3888 60  0000 L CNN "Voltage"
+F 5 "X7R" H 7315 3994 60  0000 L CNN "Type"
+F 6 "Farnell:1100408" H 7200 3850 60  0001 C CNN "Vendor"
+F 7 "AVX:SR211C104KAR" H 7200 3850 60  0001 C CNN "Manufacturer"
+	1    7200 3850
+	1    0    0    1   
 $EndComp
-Wire Wire Line
-	7200 2600 7200 2700
 Text Notes 8500 2550 0    50   ~ 0
 Put Rzo and Czo right next to output \nconnector. Also, the return ground \nshould be at the connector side.
 Wire Wire Line
@@ -1138,4 +1122,20 @@ Wire Notes Line
 	1000 1150 1000 2800
 Wire Notes Line
 	1700 4300 1700 5850
+Wire Wire Line
+	6700 3300 6800 3300
+Wire Wire Line
+	7100 3300 7200 3300
+Wire Wire Line
+	6700 4500 6700 4400
+Wire Wire Line
+	6700 4100 6700 4000
+Wire Wire Line
+	6700 3700 6700 3600
+Wire Wire Line
+	7200 3700 7200 3600
+Wire Wire Line
+	7200 4100 7200 4000
+Wire Wire Line
+	7200 4500 7200 4400
 $EndSCHEMATC
