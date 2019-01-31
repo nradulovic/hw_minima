@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.0.2-bee76a0~70~ubuntu18.04.1)
+(kicad_pcb (version 20171130) (host pcbnew "(5.0.2)-1")
 
   (general
     (thickness 1.6)
@@ -78,7 +78,7 @@
     (pad_to_mask_clearance 0.2)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 106.56 45.72)
-    (grid_origin 106.56 45.72)
+    (grid_origin 145.56 54.04)
     (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 0x00030_80000001)
@@ -430,7 +430,7 @@
     )
   )
 
-  (module Capacitor_THT:CP_Radial_D8.0mm_P3.50mm (layer F.Cu) (tedit 5B622E68) (tstamp 5B6BD3AD)
+  (module Capacitor_THT:CP_Radial_D8.0mm_P3.50mm (layer F.Cu) (tedit 5B622E68) (tstamp 5C52CA0E)
     (at 151.832 66.088 270)
     (descr "CP, Radial series, Radial, pin pitch=3.50mm, , diameter=8mm, Electrolytic Capacitor")
     (tags "CP Radial series Radial pin pitch 3.50mm  diameter 8mm Electrolytic Capacitor")
@@ -1180,7 +1180,7 @@
     (descr "Inductor, Axial series, Axial, Horizontal, pin pitch=15.24mm, , length*diameter=12*5mm^2, Fastron, MISC, http://cdn-reichelt.de/documents/datenblatt/B400/DS_MISC.pdf")
     (tags "Inductor Axial series Axial Horizontal pin pitch 15.24mm  length 12mm diameter 5mm Fastron MISC")
     (path /5B6FAE6F)
-    (fp_text reference Ld1 (at 15.24 5.08) (layer F.SilkS)
+    (fp_text reference Ld1 (at 15.24 5.715) (layer F.SilkS)
       (effects (font (size 1.8 1.8) (thickness 0.15)))
     )
     (fp_text value 2u (at 7.62 0) (layer F.SilkS)
@@ -1521,7 +1521,7 @@
     )
   )
 
-  (module Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm (layer F.Cu) (tedit 5B981E86) (tstamp 5B68BB57)
+  (module Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm (layer F.Cu) (tedit 5B981E86) (tstamp 5C52CC16)
     (at 149.292 56.984 270)
     (descr "C, Rect series, Radial, pin pitch=5.00mm, , length*width=7*3.5mm^2, Capacitor")
     (tags "C Rect series Radial pin pitch 5.00mm  length 7mm width 3.5mm Capacitor")
@@ -1558,7 +1558,7 @@
     )
   )
 
-  (module Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm (layer F.Cu) (tedit 5B8B13B0) (tstamp 5B6DCEF1)
+  (module Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm (layer F.Cu) (tedit 5B8B13B0) (tstamp 5C52CBCD)
     (at 145.228 61.984 90)
     (descr "C, Rect series, Radial, pin pitch=5.00mm, , length*width=7*3.5mm^2, Capacitor")
     (tags "C Rect series Radial pin pitch 5.00mm  length 7mm width 3.5mm Capacitor")
@@ -2964,7 +2964,7 @@
     (descr "Resistor, Axial_DIN0411 series, Axial, Horizontal, pin pitch=15.24mm, 1W, length*diameter=9.9*3.6mm^2")
     (tags "Resistor Axial_DIN0411 series Axial Horizontal pin pitch 15.24mm 1W length 9.9mm diameter 3.6mm")
     (path /5B6FAF5E)
-    (fp_text reference R2 (at 15.24 -3.81) (layer F.SilkS)
+    (fp_text reference R2 (at 15.24 -4.445) (layer F.SilkS)
       (effects (font (size 2 2) (thickness 0.15)))
     )
     (fp_text value 4.7 (at 7.62 0) (layer F.SilkS)
