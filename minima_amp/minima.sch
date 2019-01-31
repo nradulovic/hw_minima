@@ -20,10 +20,10 @@ U 1 1 5ABB2BD1
 P 8000 3500
 F 0 "J2" H 8079 3492 50  0000 L CNN
 F 1 "output" H 8079 3401 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal" H 8000 3500 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2325421.pdf" H 8000 3500 50  0001 C CNN
-F 4 "Farnell:1792766" H 8000 3500 60  0001 C CNN "Vendor"
-F 5 "Phoenix:MKDSN2,5/2-5.08" H 8000 3500 60  0001 C CNN "Manufacturer"
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.81_1x02_P3.81mm_Vertical" H 8000 3500 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2133308.pdf" H 8000 3500 50  0001 C CNN
+F 4 "Farnell:1793055" H 8000 3500 60  0001 C CNN "Vendor"
+F 5 "Phoenix:MCV 1,5/ 2-GF-3,81 " H 8000 3500 60  0001 C CNN "Manufacturer"
 	1    8000 3500
 	1    0    0    -1  
 $EndComp
@@ -87,10 +87,10 @@ U 1 1 5AE50566
 P 1000 3100
 F 0 "J1" H 920 3417 50  0000 C CNN
 F 1 "input" H 920 3326 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-3.5-H_1x03_P3.50mm_Horizontal" H 1000 3100 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2322648.pdf" H 1000 3100 50  0001 C CNN
-F 4 "Phoenix:MKDS1/3-3,5" H -1500 1200 50  0001 C CNN "Manufacturer"
-F 5 "Farnell:2478587" H -1500 1200 50  0001 C CNN "Vendor"
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical" H 1000 3100 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2309782.pdf" H 1000 3100 50  0001 C CNN
+F 4 "Phoenix:1843619" H -1500 1200 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:3704828" H -1500 1200 50  0001 C CNN "Vendor"
 	1    1000 3100
 	-1   0    0    -1  
 $EndComp
@@ -100,10 +100,10 @@ U 1 1 5AE51422
 P 8300 5600
 F 0 "J3" H 8380 5550 50  0000 L CNN
 F 1 "powersupply" H 8380 5641 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-3-5.08_1x03_P5.08mm_Horizontal" H 8300 5600 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2325422.pdf" H 8300 5600 50  0001 C CNN
-F 4 "Phoenix:MKDSN2,5/3-5.08" H 2750 1300 50  0001 C CNN "Manufacturer"
-F 5 "Farnell:1792767" H 2750 1300 50  0001 C CNN "Vendor"
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.81_1x03_P3.81mm_Vertical" H 8300 5600 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/2138271.pdf" H 8300 5600 50  0001 C CNN
+F 4 "Phoenix:1803439" H 2750 1300 50  0001 C CNN "Manufacturer"
+F 5 "Farnell:3913089" H 2750 1300 50  0001 C CNN "Vendor"
 	1    8300 5600
 	-1   0    0    1   
 $EndComp
