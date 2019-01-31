@@ -25,6 +25,8 @@ while the **Power supply** is located on separate PCB board.
 
 .. image:: images/pcb_render_corner.png
 
+.. image:: images/pcb_render_from_top.png
+
 
 Input circuit
 ============
