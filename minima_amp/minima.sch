@@ -22,8 +22,8 @@ F 0 "J2" H 8079 3492 50  0000 L CNN
 F 1 "output" H 8079 3401 50  0000 L CNN
 F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.81_1x02_P3.81mm_Vertical" H 8000 3500 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2133308.pdf" H 8000 3500 50  0001 C CNN
-F 4 "Farnell:1793055" H 8000 3500 60  0001 C CNN "Vendor"
-F 5 "Phoenix:MCV 1,5/ 2-GF-3,81 " H 8000 3500 60  0001 C CNN "Manufacturer"
+F 4 "Farnell: 3913077" H 8000 3500 60  0001 C CNN "Vendor"
+F 5 "Phoenix: 1803426 (MCV 1,5/ 2-G-3,81)" H 8000 3500 60  0001 C CNN "Manufacturer"
 	1    8000 3500
 	1    0    0    -1  
 $EndComp
@@ -89,8 +89,8 @@ F 0 "J1" H 920 3417 50  0000 C CNN
 F 1 "input" H 920 3326 50  0000 C CNN
 F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical" H 1000 3100 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2309782.pdf" H 1000 3100 50  0001 C CNN
-F 4 "Phoenix:1843619" H -1500 1200 50  0001 C CNN "Manufacturer"
-F 5 "Farnell:3704828" H -1500 1200 50  0001 C CNN "Vendor"
+F 4 "Phoenix: 1843619 (MCV 1,5/ 3-G-3,81)" H -1500 1200 50  0001 C CNN "Manufacturer"
+F 5 "Farnell: 3704828" H -1500 1200 50  0001 C CNN "Vendor"
 	1    1000 3100
 	-1   0    0    -1  
 $EndComp
@@ -102,8 +102,8 @@ F 0 "J3" H 8380 5550 50  0000 L CNN
 F 1 "powersupply" H 8380 5641 50  0000 L CNN
 F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.81_1x03_P3.81mm_Vertical" H 8300 5600 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2138271.pdf" H 8300 5600 50  0001 C CNN
-F 4 "Phoenix:1803439" H 2750 1300 50  0001 C CNN "Manufacturer"
-F 5 "Farnell:3913089" H 2750 1300 50  0001 C CNN "Vendor"
+F 4 "Phoenix: 1803439 (MCV 1,5/ 3-G-3,81)" H 2750 1300 50  0001 C CNN "Manufacturer"
+F 5 "Farnell: 3913089" H 2750 1300 50  0001 C CNN "Vendoe"
 	1    8300 5600
 	-1   0    0    1   
 $EndComp
@@ -144,7 +144,7 @@ F 3 "~" H 2950 6700 50  0001 C CNN
 	1    2950 6700
 	1    0    0    -1  
 $EndComp
-Text Notes 8000 3950 0    50   ~ 0
+Text Notes 8500 4100 0    50   ~ 0
 Return speaker ground at the\njunction of bypass capacitors \nnear power IC.
 $Comp
 L Device:C Clp?
@@ -289,7 +289,7 @@ F 3 "" H 3200 4650 50  0001 C CNN
 	1    3200 4700
 	1    0    0    -1  
 $EndComp
-Text Notes 1700 4600 0    50   ~ 0
+Text Notes 1750 5800 0    50   ~ 0
 Put Rzi and Czi right next to\ninput connector. The return\nground should be at the\nconnector side.
 Text Label 1350 3100 0    50   ~ 0
 sgnd
@@ -1070,7 +1070,7 @@ F 7 "AVX:SR211C104KAR" H 7200 2850 60  0001 C CNN "Manufacturer"
 $EndComp
 Wire Wire Line
 	7200 2600 7200 2700
-Text Notes 7650 2550 0    50   ~ 0
+Text Notes 8500 2550 0    50   ~ 0
 Put Rzo and Czo right next to output \nconnector. Also, the return ground \nshould be at the connector side.
 Wire Wire Line
 	3200 3000 4100 3000
@@ -1084,4 +1084,58 @@ Wire Wire Line
 	3700 4200 4100 4200
 Text Label 7300 3600 0    50   ~ 0
 spkhot
+Text Notes 8500 3600 0    50   ~ 0
+Matching connector:\nManufacturer: Phoenix 1826979 (MCVW 1,5/ 2-ST-3,81)\nSupplier1: Farnell: 3705080
+Wire Notes Line
+	9700 3800 9700 4150
+Wire Notes Line
+	9700 4150 8450 4150
+Wire Notes Line
+	8450 4150 8450 3800
+Wire Notes Line
+	7750 3800 9700 3800
+Wire Notes Line
+	8450 2250 10000 2250
+Wire Notes Line
+	10000 2250 10000 2600
+Wire Notes Line
+	8450 2600 8450 2250
+Wire Notes Line
+	7400 2600 10000 2600
+Wire Notes Line
+	1700 5400 2950 5400
+Wire Notes Line
+	2950 5400 2950 5850
+Wire Notes Line
+	2950 5850 1700 5850
+Text Notes 5500 5700 0    50   ~ 0
+Matching connector:\nManufacturer: Phoenix 1826982 (MCVW 1,5/ 3-ST-3,81)\nSupplier1: Farnell: 3705092
+Wire Notes Line
+	8450 3300 10750 3300
+Wire Notes Line
+	10750 3300 10750 3650
+Wire Notes Line
+	10750 3650 8100 3650
+Wire Notes Line
+	8450 3300 8450 3650
+Wire Notes Line
+	7750 5750 7750 5400
+Wire Notes Line
+	7750 5400 5450 5400
+Wire Notes Line
+	5450 5400 5450 5750
+Wire Notes Line
+	5450 5750 8200 5750
+Text Notes 1050 1450 0    50   ~ 0
+Matching connector:\nManufacturer: Phoenix 1862865 (MCVW 1,5/ 3-ST-3,5)\nSupplier1: Farnell: 5089165
+Wire Notes Line
+	1000 1500 3250 1500
+Wire Notes Line
+	3250 1500 3250 1150
+Wire Notes Line
+	3250 1150 1000 1150
+Wire Notes Line
+	1000 1150 1000 2800
+Wire Notes Line
+	1700 4300 1700 5850
 $EndSCHEMATC
