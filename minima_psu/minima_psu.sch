@@ -207,7 +207,7 @@ F 0 "R5" V 1361 5500 50  0000 C CNN
 F 1 "10" V 1452 5500 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0918_L18.0mm_D9.0mm_P22.86mm_Horizontal" V 1680 5500 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2045934.pdf" H 1750 5500 50  0001 C CNN
-F 4 "Vishay:AC05000001009JAC00" V 1750 5500 50  0001 C CNN "Manufacturer:"
+F 4 "Vishay:AC05000001009JAC00" V 1750 5500 50  0001 C CNN "Manufacturer"
 F 5 "Farnel:1735130" V 1750 5500 50  0001 C CNN "Vendor"
 F 6 "W" V 1543 5500 50  0000 C CNN "Type"
 F 7 "5W" V 1634 5500 50  0000 C CNN "Power"
@@ -218,14 +218,14 @@ $Comp
 L Device:C C13
 U 1 1 5B6BC17F
 P 1750 6000
-F 0 "C13" V 1316 6000 50  0000 C CNN
-F 1 "100n" V 1407 6000 50  0000 C CNN
+F 0 "C13" V 1900 6000 50  0000 C CNN
+F 1 "100n" V 2000 6000 50  0000 C CNN
 F 2 "Capacitor_THT:C_Rect_L26.5mm_W10.5mm_P22.50mm_MKS4" H 1788 5850 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2237778.pdf" H 1750 6000 50  0001 C CNN
-F 4 "Vishay:BFC233860104" V 1750 6000 50  0001 C CNN "Manufacturer:"
+F 4 "Vishay:BFC233860104" V 1750 6000 50  0001 C CNN "Manufacturer"
 F 5 "Farnell:1166503" V 1750 6000 50  0001 C CNN "Vendor"
-F 6 "PP Y2" V 1498 6000 50  0000 C CNN "Type"
-F 7 "300Vac" V 1589 6000 50  0000 C CNN "Voltage"
+F 6 "PP Y2" V 2100 6000 50  0000 C CNN "Type"
+F 7 "300Vac" V 2200 6000 50  0000 C CNN "Voltage"
 	1    1750 6000
 	0    1    1    0   
 $EndComp
@@ -269,14 +269,14 @@ $Comp
 L Device:C C10
 U 1 1 5B6C8A78
 P 2600 4150
-F 0 "C10" H 2715 4287 50  0000 L CNN
-F 1 "22n" H 2715 4196 50  0000 L CNN
+F 0 "C10" H 2485 4287 50  0000 R CNN
+F 1 "22n" H 2485 4196 50  0000 R CNN
 F 2 "Capacitor_THT:C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3" H 2638 4000 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2237778.pdf" H 2600 4150 50  0001 C CNN
 F 4 "Vishay:BFC233860223" H 2600 4150 50  0001 C CNN "Manufacturer"
 F 5 "Farnell:1166495" H 2600 4150 50  0001 C CNN "Vendor"
-F 6 "PP Y2" H 2715 4105 50  0000 L CNN "Type"
-F 7 "300Vac" H 2715 4014 50  0000 L CNN "Voltage"
+F 6 "PP Y2" H 2485 4105 50  0000 R CNN "Type"
+F 7 "300Vac" H 2485 4014 50  0000 R CNN "Voltage"
 	1    2600 4150
 	1    0    0    -1  
 $EndComp
@@ -388,7 +388,7 @@ F 0 "C11" H 3485 4013 50  0000 R CNN
 F 1 "470n" H 3485 4104 50  0000 R CNN
 F 2 "Capacitor_THT:C_Rect_L18.0mm_W11.0mm_P15.00mm_FKS3_FKP3" H 3638 4000 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/2047268.pdf" H 3600 4150 50  0001 C CNN
-F 4 "Vishay:BFC233922474" V 3600 4150 50  0001 C CNN "Manufacturer:"
+F 4 "Vishay:BFC233922474" V 3600 4150 50  0001 C CNN "Manufacturer"
 F 5 "Farnell:1413841" V 3600 4150 50  0001 C CNN "Vendor"
 F 6 "PP X2" H 3485 4195 50  0000 R CNN "Type"
 F 7 "310Vac" H 3485 4286 50  0000 R CNN "Voltage"
@@ -841,4 +841,26 @@ F 7 "Farnell: 1890265" H 5100 2750 50  0001 C CNN "Supplier"
 $EndComp
 Wire Wire Line
 	5100 2900 5100 3000
+Text Notes 8200 3500 0    50   ~ 0
+Matching connector:\nManufacturer: Phoenix 1826982 (MCVW 1,5/ 3-ST-3,81)\nSupplier1: Farnell: 3705092
+Wire Notes Line
+	8150 3200 10450 3200
+Wire Notes Line
+	10450 3200 10450 3550
+Wire Notes Line
+	8150 3550 10450 3550
+Wire Notes Line
+	1350 750  1350 1700
+Wire Notes Line
+	8150 3050 7500 3050
+Wire Notes Line
+	8150 3050 8150 3550
+Wire Notes Line
+	8200 3200 8200 2250
+Wire Notes Line
+	8200 2250 7500 2250
+Wire Notes Line
+	8250 3200 8250 750 
+Wire Notes Line
+	1350 750  8250 750 
 $EndSCHEMATC

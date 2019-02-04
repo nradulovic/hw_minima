@@ -1054,7 +1054,7 @@ F 7 "AVX:SR211C104KAR" H 7200 3850 60  0001 C CNN "Manufacturer"
 	1    7200 3850
 	1    0    0    1   
 $EndComp
-Text Notes 8500 2550 0    50   ~ 0
+Text Notes 8500 4600 0    50   ~ 0
 Put Rzo and Czo right next to output \nconnector. Also, the return ground \nshould be at the connector side.
 Wire Wire Line
 	3200 3000 4100 3000
@@ -1079,13 +1079,11 @@ Wire Notes Line
 Wire Notes Line
 	7750 3800 9700 3800
 Wire Notes Line
-	8450 2250 10000 2250
+	10000 4300 10000 4650
 Wire Notes Line
-	10000 2250 10000 2600
+	8450 4650 8450 4300
 Wire Notes Line
-	8450 2600 8450 2250
-Wire Notes Line
-	7400 2600 10000 2600
+	8450 4650 10000 4650
 Wire Notes Line
 	1700 5400 2950 5400
 Wire Notes Line
@@ -1138,4 +1136,6 @@ Wire Wire Line
 	7200 4100 7200 4000
 Wire Wire Line
 	7200 4500 7200 4400
+Wire Notes Line
+	7450 4300 10000 4300
 $EndSCHEMATC
