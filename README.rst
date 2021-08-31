@@ -153,7 +153,7 @@ Output shunt resistor should be between 2 Ohm and 5 Ohms. See
 chapter 7* for effect on power amplifier transfer function.
 
 Power dissipation
-`````````````````
+-----------------
 
 **NOTE:**
 
