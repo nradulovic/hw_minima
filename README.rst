@@ -18,8 +18,7 @@ The amplifier architecture consists of the following sections:
 * Power amplifier
 * Power supply
 
-**Input circuit** and **Power amplifier** sections are located on single PCB
-while the **Power supply** is located on separate PCB board.
+All sections are located on separate PCB boards.
 
 .. image:: images/pcb_from_top.png
 
@@ -28,14 +27,12 @@ while the **Power supply** is located on separate PCB board.
 .. image:: images/pcb_render_from_top.png
 
 
-Input circuit
-============
+Input circuit 
+==================================
 
 The input circuit contains:
 
 * Input EMI suppression
-* Input low pass filter
-* The ground loop breaker resistor
 
 Input EMI suppression
 ---------------------
@@ -68,6 +65,13 @@ main amplifier PCB.
 Also, a 100n X7R capacitor shall be placed between SGND and chassis right at the
 input connector. This capacitor will shunt radio and other interfirence signal
 into the Chassis Ground potential.
+
+Power amplifier
+===============
+
+* Input low pass filter
+* The ground loop breaker resistor
+* Output EMI suppression
 
 Input low pass filter
 ---------------------
@@ -106,9 +110,6 @@ The ground loop breaker resistor
 
 A ground loop breaker resistor is located between SGND and GNDPWR grounds. The
 value of this resistor should be around 10 ohms.
-
-Power amplifier
-===============
 
 Output EMI suppression
 ----------------------
@@ -151,36 +152,6 @@ Output shunt resistor should be between 2 Ohm and 5 Ohms. See
 *Douglas Self - Audio Power Amplifier Design Handbook, 3rd Ed., Output networks, 
 chapter 7* for effect on power amplifier transfer function.
 
-Paralleling multiple modules
-----------------------------
-
-Ballast resistor
-````````````````
-
-Each amplifier will connect to output bus via ballast resistor. The ballast
-resistor is made of three 1 Ohm resistors wired in parallel, which gives 
-``Rb=0.33 Ohm``.Maximum output current of the power amplifier is:
-
-.. math::
-
-    Io(max)=Uo(max)/Zload(min)
-    
-With Uo(max) approx 30V and Zload(min) equal to 2 Ohms we get:
-
-.. math::
-    
-    Io(max)=15A
-
-This current is divided by the number of modules in the amplifier, given by the
-variable ``N=3``. Maximum power dissipation in ballast resistor is therefore:
-
-.. math::
-
-    Pbdiss(max)=((Io(max)/N)**2*Rb)/3=2.75W
-    
-Resistors with power dissipation of 3 Watts is a good and very conservative
-choice.
-
 Power dissipation
 `````````````````
 
@@ -196,44 +167,12 @@ is approximately 50W we get that the transformer supports crest factor of 4
 (see: 
 *https://www.neurochrome.com/taming-the-lm3886-chip-amplifier/power-supply-design*).
 
-This means that effective output power is around ``50W/4 = 12.5W``.
-
-Maximum voltages at:
-
-* Instantenious dissipation for LM1875 is ``Pdiss=30W``.
-* Load phase is ``LoadPHI=60degrees``.
-* Including quiescent current dissipation.
-* Case temperature is 60C degrees.
-* Taking into account OPS SOA.
-
-+-------------+-------------+-----------+--------------+
-| Zload [ohm] | Vsupply [V] | Vdrop [V] | Pdiss [W]    |
-+-------------+-------------+-----------+--------------+
-| 16          | 26          | 2.2       | 19.1         |
-+-------------+-------------+-----------+--------------+
-| 12          | 24          | 2.6       | 21.1         |
-+-------------+-------------+-----------+--------------+
-| 8           | 23          | 4.4       | 26.8         |
-+-------------+-------------+-----------+--------------+
-| 6           | 21          | 4.6       | 28.9         |
-+-------------+-------------+-----------+--------------+
-| 4           | 16          | 5.2       | 22.6         |
-+-------------+-------------+-----------+--------------+
-
-This table tells us that if we want to drive 4ohm load at 26V we need 4 pieces
-of LM1875 in parallel. This is quite a number of ICs, but fortunately, the
-table presumes that the power supply can produce constant 26V at continuous
-load and the signal is sinusoid. This is not the case with unregulated power
-supply and music signals. We have to take into account how much energy is
-stored in power supply capacitors and how much will the transformer voltages 
-sag under these conditions and that music signal has much lower effective power
-comparing to instantaneous power.
-
 Gain value
 ----------
 
-Using inverted topology since we want to reduce common mode distortion in the
-input stage.
+For this power amplifier we are using non-inverting topology for simplicity
+reasons. If you would like to have less distortion then LM1875 should be used
+in inverting configuration.
 
 The equivalent gain circuit resistance needs to stay below 600ohms. This is so
 because all noise measurements in data-sheet were done with 600ohms or 0ohms.
@@ -241,14 +180,14 @@ because all noise measurements in data-sheet were done with 600ohms or 0ohms.
 Using low feedback gain is preferred for several reasons:
 
 * there is more loop gain available to reduce the distortion
-* reduced outout noues
+* reduced output noise
 * lower offset at output
 
 Nominal gain is:
 
 .. math::
 
-    G=-Rf/Rg
+    G=-Rf/Rg+1
 
 
 Using E24 series of resistors:
@@ -256,15 +195,15 @@ Using E24 series of resistors:
 +-----------+-----------+---------+
 | Rf [Ohm]  | Rg [kOhm] | G [V/V] |
 +-----------+-----------+---------+
-| 510       |  7.5      | -14.7   |
+| 510       |  7.5      | 15.7    |
 +-----------+-----------+---------+
-| *510*     |  *8.2*    | *-16.0* |
+| *510*     |  *8.2*    | *17.0*  |
 +-----------+-----------+---------+
-| 510       |  9.1      | -17.8   |
+| 510       |  9.1      | 18.8    |
 +-----------+-----------+---------+
-| 510       | 10.0      | -19.6   |
+| 510       | 10.0      | 20.6    |
 +-----------+-----------+---------+
-| 510       | 11.0      | -21.5   |
+| 510       | 11.0      | 22.5    |
 +-----------+-----------+---------+
 
 Using E48 series of resistors:
@@ -272,25 +211,25 @@ Using E48 series of resistors:
 +-----------+-----------+---------+
 | Rf [Ohm]  | Rg [kOhm] | G [V/V] |
 +-----------+-----------+---------+
-| 511       |  7.50     | -14.7   |
+| 511       |  7.50     | 15.7    |
 +-----------+-----------+---------+
-| 511       |  7.87     | -15.4   |
+| 511       |  7.87     | 16.4    |
 +-----------+-----------+---------+
-| *511*     |  *8.25*   | *-16.1* |
+| *511*     |  *8.25*   | *17.1*  |
 +-----------+-----------+---------+
-| 511       |  8.66     | -16.9   |
+| 511       |  8.66     | 17.9    |
 +-----------+-----------+---------+
-| 511       |  9.09     | -17.8   |
+| 511       |  9.09     | 18.8    |
 +-----------+-----------+---------+
-| 511       |  9.53     | -18.6   |
+| 511       |  9.53     | 19.6    |
 +-----------+-----------+---------+
-| 511       | 10.00     | -19.6   |
+| 511       | 10.00     | 20.6    |
 +-----------+-----------+---------+
-| 511       | 10.50     | -20.5   |
+| 511       | 10.50     | 21.5    |
 +-----------+-----------+---------+
-| 511       | 11.00     | -21.5   |
+| 511       | 11.00     | 22.5    |
 +-----------+-----------+---------+
-| 499       |  7.50     | -15.0   |
+| 499       |  7.50     | 16.0    |
 +-----------+-----------+---------+
 
 Chosen values for E24 series:
@@ -303,109 +242,6 @@ Chosen values for E48 series:
 * Rf = 7.5kOhm
 * Rg = 499 Ohm
  
-Chosen values when using parallel E24 series (two resistor):
-
-* Rf = 15kOhm
-* Rg = 1kOhm
-
-Chosen values when using parallel E48 series (two resistor):
-
-* Rf = 15kOhm
-* Rg = 1kOhm
-
-
-Gain errors when using parallel solution
-````````````````````````````````````````
-
-Nominal absolute gain is:
-
-.. math::
-
-    G=Rf/Rg
-
-Where ``Rf`` is the resistor towards output and ``Rg`` is the resistor towards
-signal source. We are using absolute gain here since it's more natural to work
-with positive numbers. The resistor tolerance is 0.1%. Maximum value for gain
-due to resistor tolerances in this case is:
-
-.. math::
-
-    G(max)=Rf(max)/Rg(min)
-
-    G(max)=(Rf*(1+pp))/(Rg*(1-pp))=G*(1+pp)/(1-pp)
-
-Minimum gain is:
-
-.. math::
-
-    G(min)=Rf(min)/Rg(max)
-
-    G(min)=(Rf*(1-pp))/(Rg*(1+pp))=G*(1-pp)/(1+pp)
-
-Maximum voltage difference by resistor tolerances can be calculated by:
-
-.. math::
-
-    Uin=Uout(max)/G
-
-    Urdiff(max)=G(max)*Uin-G(min)*Uin=Uin*(G(max)-G(min))
-
-    Urdiff(max)=(Uout(max)/G)*(G(max)-G(min))
-
-This approximates to: 
-
-.. math::
-
-    Udiff(max)=Uout(max)*4*pp
-
-For 0.1% the pp is 0.001, so if ``pp=0.001`` and ``uout(max) = 30V``, we get:
-
-.. math::
-
-    Urdiff(max) = 120mV
-
-Maximum voltage difference due to different open loop gains can be calculated,
-too:
-
-.. math::
-
-    Eadiff(max)=uout(max)/A(min)
-
-Typical open loop gain in the data-sheet is 115dB. Minimum open loop gain is
-90dB. This calculates to the difference of input voltage, 90dB is approx.
-30.000:
-
-.. math::
-
-    Eadiff(max)=30/30000=1mV
-
-This calculates to:
-
-.. math::
-
-    Uadiff(max)=Eadiff(max)*g=30mV
-
-Total max difference voltage is sum of voltages created from resistor
-tolerances and a voltage from open loop gain deficiency:
-
-.. math::
-
-    Udiff(max)=Urdiff(max)+Uadiff(max)=120+30=150mV
-
-For this part of circuit there is no advantage of using multiple resistors
-(parallel or series) to get the desired resistance but lower the tolerance.
-The reason the tolerances do not decrease when using multiple resistors is
-because of the involved manufacturing process. Using multiple resistors is
-OK only in situation when wanting bigger power dissipation ability or to get
-a specific non E24 resistance.
-
-The equivalent resistance of the loop gain circuitry must be below 600ohms.
-
-The LM1875 shall be in differential connection. The lower arm of the gain loop
-circuitry shall use ~500ohm resistor. Using 470uF we get 0.68Hz lower corner
-frequency. Also, the signal is applied to inverting input. See Bob Cordell
-super gain clone ``.ppt``.
-
 Frequency compensation
 ----------------------
 
@@ -417,7 +253,7 @@ The LM1875 is modeled in the following way:
 * ``Fp3``, pole which probably originates from input or intermediate stages.
 * ``Fp4 Hz``, pole which probably originates from input or intermediate stages.
 * ``Rops``, open loop output stage impedance. The OPS open loop impedance is 
-  unusually low because the LM3886 uses output inclusive Miller compensation
+  unusually low because the LM1875 uses output inclusive Miller compensation
   which can be observed on the equivalent schematic in the data-sheet.
 
 +-----------+-----------+-----------+-----------+-----------+-----------+-----------+
@@ -489,9 +325,9 @@ For LM1875 we would get:
     
     Rf = 7.5kOhm
     
-    fp2 = 1.6e6 Hz
+    fp2 = 1.5e6 Hz
     
-    Cl=1/(2*pi*Rf*fp2)=13.3pF
+    Cl=1/(2*pi*Rf*fp2)=14.1pF
     
 Outcome:
 
@@ -572,7 +408,7 @@ For LM1875 we get:
 
 .. math::
 
-    Cf=Cl+Csi+Cadd=13.3+0.8+2pF=16.1pF
+    Cf=Cl+Csi+Cadd=14.1+0.8+2pF=16.9pF
     
 Since the closest, standard values of capacitors are 15pF and 18pF, we choose
 the 15pF as the final value for `Cl` capacitor:
@@ -612,44 +448,6 @@ powers of 20W-30W @ 8 Ohm.
 
 * On case chassis there should be a safety ground screw just near at the input
   220V socket.
-
-
-Parallel chip solution
-----------------------
-
-Transformer specification for LM1875 amplifier is the following:
-
-* ``S=200VA``, power rating.
-* ``Usn1=20Veff``, first secondary nominal voltage.
-* ``Usn2=20Veff``, second secondary nominal voltage.
-* ``k=5%``, regulation.
-
-Secondary internal resistance is:
-
-.. math::
-
-    Usu=Usn1*(1+(k/100))
-    
-    Isn=S/(Usn1+Usn2)
-    
-    Ri=(Usn1-Usu)/Isn
-    
-Using values from above we get:
-
-.. math:: 
-    
-    Usu=20*(1+(5/100))=21Veff
-    
-    Isn=5Aeff
-
-    Ri=200mOhm
-    
-The power supply section is using two banks of 10mF capacitors with 0.22Ohm
-resistor in series between them. This arrangement gives time constant about
-100ms when going from unloaded to full load state.
-
-Single chip solution
---------------------
 
 Transformer specification for LM1875 amplifier is the following:
 
